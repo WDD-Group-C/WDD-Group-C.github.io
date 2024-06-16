@@ -6,6 +6,7 @@
 !*.jpg
 !*.svg
 !*.gif
+!*.mp3
 !*.mp4
 !*.txt
 !README.md
