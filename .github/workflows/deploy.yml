@@ -1,0 +1,25 @@
+name: Change Default Webpage
+
+on:
+  push:
+    branches:
+      - main  # adjust branch name as needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Switch default webpage to splash.html
+        run: |
+          mv splash.html index.html
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add index.html
+          git commit -m "Change default webpage to splash.html"
+          git push
