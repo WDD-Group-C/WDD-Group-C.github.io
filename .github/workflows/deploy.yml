@@ -16,15 +16,16 @@ jobs:
         run: |
           mv splash.html index.html
 
-      - name: Configure Git
+      - name: Commit changes
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
+          git add index.html
+          git commit -m "Change default webpage to splash.html"
 
-      - name: Commit and push changes
+      - name: Push changes to the pull request branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git add index.html
-          git commit -m "Change default webpage to splash.html"
-          git push origin main
+          git push origin HEAD:${{ github.head_ref }}
+
