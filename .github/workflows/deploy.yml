@@ -1,7 +1,7 @@
 name: Change Default Webpage
 
 on:
-  pull_request:
+  push:
     branches:
       - main 
 
