@@ -3,7 +3,7 @@ name: Change Default Webpage
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   deploy:
@@ -16,10 +16,15 @@ jobs:
         run: |
           mv splash.html index.html
 
-      - name: Commit and push changes
+      - name: Configure Git
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           git add index.html
           git commit -m "Change default webpage to splash.html"
-          git push
+          git push origin main
