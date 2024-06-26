@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          node-version: '20'  # Update Node.js version to 20
 
       - name: Switch default webpage to splash.html
         run: |
@@ -23,5 +21,7 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git add index.html
+          git commit -m "Change default webpage to splash.html"
+          git push
           git commit -m "Change default webpage to splash.html"
           git push
