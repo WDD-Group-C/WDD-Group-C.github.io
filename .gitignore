@@ -3,6 +3,7 @@
 !*.css
 !*.js
 !*.png
+!images/*.png
 !*.jpg
 !*.svg
 !*.gif
