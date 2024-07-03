@@ -1,5 +1,6 @@
-# ignores all files
+# ignores all files and directories
 *
+*/
 */*
 
 # except for the following
@@ -24,15 +25,12 @@
 !README.md
 !LICENSE.md
 !images/
-images/*
 !images/*.jpg
 !images/*.png
 !images/*.svg
 !images/*.gif
 !scripts/
-scripts/*
 !scripts/*.js
 !videos/
-videos/*
 !videos/*.mp3
 !videos/*.mp4
