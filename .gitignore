@@ -1,10 +1,26 @@
 # ignores all files
 *
+*/*
 
 # except for the following
-!*.html
-!*.css
-!*.js
+!contentpage-stud4.html
+!contentpage-student1.html
+!contentpage-student2.html
+!contentpage-student3.html
+!feedback.html
+!gallery.html
+!home.html
+!index.html
+!pageedit-stud4.html
+!pageedit-student1.html
+!pageedit-student2.html
+!pageeditor-student3.html
+!profile.html
+!shop.html
+!sitemap.html
+!splash.html
+!team.html
+!style.css
 !README.md
 !LICENSE.md
 !images/
@@ -13,16 +29,10 @@ images/*
 !images/*.png
 !images/*.svg
 !images/*.gif
+!scripts/
+scripts/*
+!scripts/*.js
 !videos/
 videos/*
 !videos/*.mp3
 !videos/*.mp4
-
-# ignores these files
-.gitignore
-dist/
-build/
-.idea/
-.vscode/
-.DS_Store
-Thumbs.db
