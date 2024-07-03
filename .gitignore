@@ -1,19 +1,28 @@
+# ignores all files
+*
+
+# except for the following
 !*.html
 !*.css
 !*.js
-!images/*.png
-!images/*.jpg
-!images/*.svg
-!images/*.gif
-!videos/*.mp3
-!videos/*.mp4
 !README.md
 !LICENSE.md
-!.gitignore
+!images/
+images/*
+!images/*.jpg
+!images/*.png
+!images/*.svg
+!images/*.gif
+!videos/
+videos/*
+!videos/*.mp3
+!videos/*.mp4
+
+# ignores these files
+.gitignore
 dist/
 build/
 .idea/
 .vscode/
 .DS_Store
 Thumbs.db
-
