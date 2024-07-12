@@ -1,45 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gallery</title><!--Title to be appeared in the top of the browser window-->
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <!--The style tag is used to decorate the page by setting fonts, colors, margins, etc...-->
-    <style> 
-      body{
-        background-image: url("images/background.png");
-        background-color: rgb(130, 185, 206);
-        background-repeat: no-repeat;
-        background-size: cover;
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Gallery</title><!--Title to be appeared in the top of the browser window-->
+        <link rel = "stylesheet" href = "style.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <!--The style tag is used to decorate the page by setting fonts, colors, margins, etc...-->
+        <style>
+            h1{
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .galleryImages img{
+                height: 300px;
+                width: 200px;
+            }
+            .galleryImages{
+                margin: 10px 10px 0 0;
+            }
 
-      }
-      .image1{
-        display: block;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
-    	<script>
-        // Javascript goes here
-      </script>
-  </head>
-  <body>
-    <header>
-        <h1>Feel free to explore the images in this page and learn more about life below the sea</h1><!--Main heading-->
-    </header>
-    
-    <main><!--Main Tag contains the main content, in this case, some images and their descriptions-->
-        <div class = "image1">
-          <img src = "images/lifeundersea1.png" alt = "main pic(underwater view)">
-        </div>
-    </main>
-    
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
-  </body>
+            .target, div{
+                display: inline-block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Gallery</h1>
+        </header>
+        
+            <div class = "galleryImages">
+                <div class = "target1">
+                    <img src="images/target1.png" alt = "reduce marine pollution">
+                    <p>target 1</p>
+                </div>
+                <div>
+                    <img src = "images/target2.png" alt = "protect and restore ecosystems">
+                    <p>target 2</p>
+                </div>
+                <div class = "target4">
+                    <img src="images/target1.png" alt = "reduce marine pollution">
+                    <p>target 4</p>
+                </div>
+            </div>
+    </body>
 </html>
