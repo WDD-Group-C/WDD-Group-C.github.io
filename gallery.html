@@ -2,7 +2,7 @@
 <html lang = "en">
     <head>
         <meta charset = "UTF-8">
-        <meta name = "viewport" content = "width=device-width, initial scale=1.0">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"><!--view the window in its original size-->
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Gallery</title><!--Title to be appeared in the top of the browser window-->
         <link rel = "stylesheet" href = "style.css">
@@ -12,39 +12,71 @@
             h1{
                 text-align: center;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            }
+            main{
+                background-color: rgb(164, 206, 222);
             }
             .galleryImages img{
-                height: 300px;
-                width: 200px;
+                height: 330px;
+                width: 270px;
+               
             }
             .galleryImages{
-                margin: 10px 10px 0 0;
+                margin-top: 90px;
+                margin-left: 150px;
+                
             }
 
-            .target, div{
+            .target{
                 display: inline-block;
+                margin: 10px;
+                border: 1px solid lightblue;
             }
 
+            div.target:hover {
+                border: 1.3px solid rgb(7, 10, 85);
+            }
+
+            div p{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+                width: 250px;
+                text-align: center;
+                padding-top: 10px;
+            }
+            
         </style>
     </head>
     <body>
         <header>
-            <h1>Gallery</h1>
+            <h1 id = "top">Gallery</h1>
         </header>
-        
-            <div class = "galleryImages">
-                <div class = "target1">
-                    <img src="images/target1.png" alt = "reduce marine pollution">
-                    <p>target 1</p>
+            <main>
+                <div class = "galleryImages">
+                    <div class = "target">
+                        <img src="images/target1.png" alt = "reduce marine pollution">
+                        <p>Reduce Marine Pollution</p>
+                    </div>
+                    <div class = "target">
+                        <img src = "images/target2.png" alt = "protect and restore ecosystems">
+                        <p>Protect and Restore Ecosystems</p>
+                    </div>
+                    <div class = "target">
+                        <img src="images/target3.png" alt = "reduce marine pollution">
+                        <p>Reduce Marine Pollution</p>
+                    </div>
+                    <div class = "target">
+                        <img src="images/target4.png" alt = "reduce marine pollution">
+                        <p>Sustainable Fishing</p>
+                    </div>
+                    <div class = "target">
+                        <img src="images/target5.png" alt = "Conserve Coastal and Marine Areas">
+                        <p>Conserve Coastal and Marine Areas</p>
+                    </div>
                 </div>
-                <div>
-                    <img src = "images/target2.png" alt = "protect and restore ecosystems">
-                    <p>target 2</p>
-                </div>
-                <div class = "target4">
-                    <img src="images/target1.png" alt = "reduce marine pollution">
-                    <p>target 4</p>
-                </div>
-            </div>
+                <br>
+                <a href = "#top">back to top</a>
+            </main>
+
     </body>
 </html>
