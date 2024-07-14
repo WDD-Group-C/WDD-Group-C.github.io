@@ -11,7 +11,8 @@
         <style>
             h1{
                 text-align: center;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-family: 'Georgia', serif;
+                color: rgb(78, 73, 224);
 
             }
             main{
@@ -23,14 +24,14 @@
                
             }
             .galleryImages{
-                margin-top: 90px;
-                margin-left: 150px;
-                
+                width: fit-content;
+                margin: auto;
             }
 
             .target{
                 display: inline-block;
-                margin: 10px;
+                overflow: hidden;
+                margin: 2px;
                 border: 1px solid lightblue;
             }
 
@@ -38,45 +39,275 @@
                 border: 1.3px solid rgb(7, 10, 85);
             }
 
-            div p{
+            div.target p{
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-                width: 250px;
+                width: 200px;
                 text-align: center;
-                padding-top: 10px;
+                padding: 15px;
             }
-            
+            #left, #right{
+                width: 100px;
+                color:rgb(9, 40, 237);
+                background-color: antiquewhite;
+                font-size: 1.5em;
+
+            }
+
+            #leftAndRightArrows{
+                border: 1px;
+                width: fit-content;
+                display: flex;
+                margin: 0 auto;
+                gap: 20px;
+                padding-top: 50px;
+            }
+
+            #left:hover {
+              color:black;
+              background-color: rgb(251, 225, 191);  
+            }
+
+            #right:hover {
+                color: black;
+                background-color: rgb(251, 225, 191);
+            }
+
+            a{
+                display: block;
+                text-align: center;
+                font-family: cursive;
+            }
+            a:visited{
+                color:blue
+            }
+            a:hover {
+                color: red;
+            }
+            a span:active {
+                background-color: yellow; 
+            }
+            .enlarged{ /*this block will be hidden unless the user clicks a target*/
+                background-color: aliceblue;
+                border-radius: 4px;
+                display: none; /*or else it will be inline-flex*/
+                width: max-content;
+                margin: auto;
+
+            }
+            .enlarged img{
+                width: 550px;
+                height: 450px;
+                border-radius: 3px;
+                padding: 30px;
+            }
+
+            .enlarged dt, dd{
+                margin-bottom: 10px;
+            }
+            .enlarged dt{
+                color:rgb(53, 78, 200);
+            }
+            .enlarged dd{
+                color:rgb(44, 129, 204)
+            }
+
+            .enlarged dl, form{
+                padding: 2px;
+            }
+            .enlarged .bg{
+                width: 45px;
+                height: 45px;
+
+            }
+            #vertical{
+                border: 1px ridge black;
+                margin: 20px;
+                width: max-content;
+            }
+            #vrtical dt dd p, ul{
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            #bgLabel{
+                size: 0.5em;
+            }
+            .exit{
+                width: min-content;
+                color: black;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .nextgalleryImages{
+                display : none;
+                width: fit-content;
+                margin: auto;
+            }
+            .nextgalleryImages img{
+                height: 330px;
+                width: 270px;
+            }
         </style>
     </head>
     <body>
         <header>
-            <h1 id = "top">Gallery</h1>
         </header>
-            <main>
-                <div class = "galleryImages">
-                    <div class = "target">
-                        <img src="images/target1.png" alt = "reduce marine pollution">
-                        <p>Reduce Marine Pollution</p>
-                    </div>
-                    <div class = "target">
-                        <img src = "images/target2.png" alt = "protect and restore ecosystems">
-                        <p>Protect and Restore Ecosystems</p>
-                    </div>
-                    <div class = "target">
-                        <img src="images/target3.png" alt = "reduce marine pollution">
-                        <p>Reduce Marine Pollution</p>
-                    </div>
-                    <div class = "target">
-                        <img src="images/target4.png" alt = "reduce marine pollution">
-                        <p>Sustainable Fishing</p>
-                    </div>
-                    <div class = "target">
-                        <img src="images/target5.png" alt = "Conserve Coastal and Marine Areas">
-                        <p>Conserve Coastal and Marine Areas</p>
-                    </div>
+        <main>
+            <h1 id = "top">Gallery</h1>
+            <div id = "leftAndRightArrows">
+                <button id = "left">&larr;</button>
+                <button id = "right">&rarr;</button>
+            </div>
+            <div class = "galleryImages">
+                <!--target thumbnails-->
+                <div class = "target" id = "target1" onclick = "showEnlargement('section1')">
+                    <img src="images/target1.png" alt = "Reduce Marine Pollution">
+                    <p>Reduce Marine Pollution</p>
                 </div>
-                <br>
-                <a href = "#top">back to top</a>
-            </main>
-
+                <div class = "target" id = "target2" onclick = "showEnlargement('section2')">
+                    <img src = "images/target2.png" alt = "Protect and Restore Ecosystems">
+                    <p>Protect and Restore Ecosystems</p>
+                </div>
+                <div class = "target" id = "target3" onclick = "showEnlargement('section3')">
+                    <img src="images/target3.png" alt = "Reduce Ocean Acidification">
+                    <p>Reduce Ocean Acidification</p>
+                </div>
+                    
+            </div>
+            <div class = "nextgalleryImages">
+                <!--target thumbnails-->
+                <div class = "target" id = "target4" onclick = "showEnlargement('section4')">
+                    <img src="images/target4.png" alt = "Sustainable fishing">
+                    <p>Sustainable Fishing</p>
+                </div>
+                <div class = "target" id = "target5" onclick = "showEnlargement('section5')">
+                    <img src = "images/target5.png" alt = "Conserve Coastal and Marine Areas">
+                    <p>Conserve Coastal and Marine Areas</p>
+                </div>
+                <div class = "target" id = "target6" onclick = "showEnlargement('section6')">
+                    <img src="images/target6.png" alt = "End Subsidies Contributing to OverFishing">
+                    <p>End Subsidies Contributing to OverFishing</p>
+                </div>
+                    
+            </div>
+            <div class = "enlarged" id = "section1">
+                <img src="images/target1.png" alt = "Reduce Marine Pollution">
+                <div id = "vertical">
+                    <dl>
+                        <dt><h4>Reduce Marine Pollution</h3></dt>
+                        <dd>
+                            <p>Marine pollution is the combination of chemicals and trash humans 
+                                make, <br>which are blown or thrown into the ocean.  While that is a solution to get rid of trash on land,<br>
+                                it threatens the lives of marine life and therefore, needs to be reduced.<br> To fulfill the act, the following steps could be taken;</p>
+                            <ul>
+                                <li>Stop the usage of plastic bags (Use reusable bags and bottles instead)</li>
+                                <li>Get together as a community to clean rivers and beaches</li>
+                                <li>Avoid littering</li>
+                                <li>Proper disposal of trash</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <br>
+                    <br>
+                    <form>
+                        <label for = "bg"><span class = "bgLabel">change background theme</span></label>
+                        <input type="color" id="bg1" class = "bg" >
+                    </form><br>
+                </div>
+                <span class = "exit"><button onclick = "hideEnlargement(section1)">&#10006;</button></span>
+            </div>
+            <div class = "enlarged" id = "section2">
+                <img src="images/target2.png" alt = "Protect and Restore Ecosystems">
+                <div id = "vertical">
+                    <dl>
+                        <dt><h4>Protect and Restore Ecosystems</h3></dt>
+                        <dd>Description for target2</dd>
+                    </dl>
+                    <br>
+                    <br>
+                    <form>
+                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
+                        <input type="color" id="bg2" class = "bg" onchange="changeBackground(section1)">
+                    </form><br>
+                </div>
+                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+            </div>
+            <div class = "enlarged" id = "section3">
+                <img src="images/target3.png" alt = "Reduce Ocean Acidification">
+                <div id = "vertical">
+                    <dl>
+                        <dt><h4>Protect and Restore Ecosystems</h3></dt>
+                        <dd>Description for target3</dd>
+                    </dl>
+                    <br>
+                    <br>
+                    <form>
+                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
+                        <input type="color" id="bg3" class = "bg" >
+                    </form><br>
+                </div>
+                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+            </div>
+            <div class = "enlarged" id = "section4">
+                <img src="images/target4.png" alt = "Protect and Restore Ecosystems">
+                <div id = "vertical">
+                    <dl>
+                        <dt><h4>Protect and Restore Ecosystems</h3></dt>
+                        <dd>Description for target4</dd>
+                    </dl>
+                    <br>
+                    <br>
+                    <form>
+                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
+                        <input type="color" id="bg4" class = "bg" >
+                    </form><br>
+                </div>
+                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+            </div>
+            <div class = "enlarged" id = "section5">
+                <img src="images/target5.png" alt = "Protect and Restore Ecosystems">
+                <div id = "vertical">
+                    <dl>
+                        <dt><h4>Protect and Restore Ecosystems</h3></dt>
+                        <dd>Description for target5</dd>
+                    </dl>
+                    <br>
+                    <br>
+                    <form>
+                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
+                        <input type="color" id="bg5" class = "bg" >
+                    </form><br>
+                </div>
+                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+            </div>
+            <div class = "enlarged" id = "section6">
+                <img src="images/target6.png" alt = "Protect and Restore Ecosystems">
+                <div id = "vertical">
+                    <dl>
+                        <dt><h4>Protect and Restore Ecosystems</h3></dt>
+                        <dd>Description for target6</dd>
+                    </dl>
+                    <br>
+                    <br>
+                    <form>
+                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
+                        <input type="color" id="bg6" class = "bg" >
+                    </form><br>
+                </div>
+                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+            </div>
+            <br>
+            <a href = "#top"><span> back to top </span></a>
+        </main>
+        <footer></footer>
+        <script>
+            function showEnlargement(sectionId){
+                document.getElementById(sectionId).style.display = "block";
+            }
+            function hideEnlargement(sectionId){
+                document.getElementById(sectionId).style.display = "none";
+            }
+            function changeBackground(section, colorId){
+                let color = document.querySelector('#${sectionId} #bg').value;
+                document.getElementById(sectionId).style.backgroundColor = color;
+            }
+        </script>
     </body>
 </html>
