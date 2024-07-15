@@ -1,30 +1,117 @@
-
-<!-- Add a title and delete all the comments below including the comment in the script tag-->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    	<script>
-        // Javascript goes here
-      </script>
-  </head>
-  <body>
-    <header>
-        <!-- Header content goes here -->
-    </header>
-    
-    <main>
-        <!-- Main content goes here. Should not contain any repeated content -->
-    </main>
-    
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
-  </body>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"><!--view the window in its original size-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Page Editor</title><!--Title to be appeared in the top of the browser window-->
+        <link rel = "stylesheet" href = "style.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <style>
+            #about p{
+                color: rgb(8, 103, 106);
+                text-align: center;
+            }
+            header{
+                background-image: url('images/pageedit.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 10px;
+            }
+            body{
+                background-image: url('images/pageedit2.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #top{
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                text-shadow: 0.5px 0.5px black;
+                color:rgb(60, 38, 81)
+            }
+            .topandbottom{
+                display: flex;
+                justify-content: center;
+            }
+            body a:hover{
+                color:rgb(61, 149, 178);
+            }
+            body a:active{
+                color:darkslategrey;
+            }
+            table th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+                padding-inline: 5px;/*setting spaces between the element and its margin for the table */
+            }
+
+            table{
+                width: 80%;
+                margin: 0 auto; /*0 represents the y axis ad auto represents the x axis. 
+                since the x axis i et to auto, the table will be placed in the centre horzontally*/
+            }
+            #check{
+                color:green;/*setting the check marks to green color*/
+            }
+            footer{
+                background-image: url('images/pageedit4.png');
+                background-repeat: repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <header><!--details about myself-->
+            <div id = "about">
+                <hr>
+                <p>Name: Sarah Aleesha Samuel</p>
+                <p>Role: Student 4</p>
+                <p>This page was edited by none other than ME!</p>
+                <hr>
+            </div>
+        </header>
+        <main><!--main content that contains a table, containing my tasks, decrptions, and links to those specific tasks-->
+            <div class="topandbottom">
+                <a href = "#bottom">&darr; to the bottom we go</a>
+            </div>
+            <h1 id = "top">About Me</h1>
+            <table>
+                <tr><!--headings of the table. The 'th' tag automatically aligns the text to the centre of the cell and bolds the text-->
+                    <th>Index</th>
+                    <th>Task</th>
+                    <th>Description</th>
+                    <th>Links to the pages</th>
+                    <th id = "des">Completed</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Gallery</td>
+                    <td>I created the gallery using images from Pinterest and designed the page using CSS and implemented user interaction using JavaScript</td>
+                    <td><a href = "gall.html" target = "_blank">link to Gallery</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Site Map</td>
+                    <td>I created the site map of our website using JavaScript, CSS and HTML5. the sitemap was designed to interact with the user and guide the user throughout the website by providing links to each page </td>
+                    <td><a href = "site.html" target = "_blank">link to Site Map</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Page Editor</td>
+                    <td>I created the page editor using my knowledge of the table attributes in HTML. The aesthetic of this page is rather different compared to the main topic of the website</td>
+                    <td><a href = "site.html" target = "_blank">link to Site Map</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+            </table>
+            <br>
+        </main>
+        <footer>
+            <br>
+            <div class="topandbottom" id = "bottom"><!--section that contains the link that guides the user to the top of this page-->
+                <a href = "#top">Take me up &uarr;</a>
+            </div>
+        </footer>
+    </body>
 </html>
