@@ -27,6 +27,15 @@
                 width: fit-content;
                 margin: auto;
             }
+            .nextgalleryImages{
+                display : none;
+                width: fit-content;
+                margin: auto;
+            }
+            .nextgalleryImages img{
+                height: 330px;
+                width: 270px;
+            }
 
             .target{
                 display: inline-block;
@@ -87,7 +96,7 @@
                 background-color: yellow; 
             }
             .enlarged{ /*this block will be hidden unless the user clicks a target*/
-                background-color: aliceblue;
+                background-color: rgb(221, 219, 218);
                 border-radius: 4px;
                 display: none; /*or else it will be inline-flex*/
                 width: max-content;
@@ -95,7 +104,7 @@
 
             }
             .enlarged img{
-                width: 550px;
+                width: 530px;
                 height: 450px;
                 border-radius: 3px;
                 padding: 30px;
@@ -120,11 +129,11 @@
 
             }
             #vertical{
-                border: 1px ridge black;
-                margin: 20px;
+                border: 1px ridge rgb(46, 105, 194);
+                margin: 15px;
                 width: max-content;
             }
-            #vrtical dt dd p, ul{
+            #vertical dt dd p, ul{
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
             #bgLabel{
@@ -135,27 +144,19 @@
                 color: black;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             }
-            .nextgalleryImages{
-                display : none;
-                width: fit-content;
-                margin: auto;
-            }
-            .nextgalleryImages img{
-                height: 330px;
-                width: 270px;
-            }
+
         </style>
     </head>
     <body>
-        <header>
+        <header><!--this section appears at the top of the page-->
         </header>
         <main>
             <h1 id = "top">Gallery</h1>
             <div id = "leftAndRightArrows">
-                <button id = "left">&larr;</button>
-                <button id = "right">&rarr;</button>
+                <button id = "left" onclick="nextthreetargets('nextgalleryimages', 'galleryimages')">&larr;</button>
+                <button id = "right" onclick="nextthreetargets('galleryimages', 'nextgalleryimages')">&rarr;</button>
             </div>
-            <div class = "galleryImages">
+            <div class = "galleryImages" id = "galleryimages">
                 <!--target thumbnails-->
                 <div class = "target" id = "target1" onclick = "showEnlargement('section1')">
                     <img src="images/target1.png" alt = "Reduce Marine Pollution">
@@ -171,7 +172,7 @@
                 </div>
                     
             </div>
-            <div class = "nextgalleryImages">
+            <div class = "nextgalleryImages" id = "nextgalleryimages">
                 <!--target thumbnails-->
                 <div class = "target" id = "target4" onclick = "showEnlargement('section4')">
                     <img src="images/target4.png" alt = "Sustainable fishing">
@@ -191,10 +192,10 @@
                 <img src="images/target1.png" alt = "Reduce Marine Pollution">
                 <div id = "vertical">
                     <dl>
-                        <dt><h4>Reduce Marine Pollution</h3></dt>
+                        <dt><h4>Reduce Marine Pollution</h4></dt>
                         <dd>
                             <p>Marine pollution is the combination of chemicals and trash humans 
-                                make, <br>which are blown or thrown into the ocean.  While that is a solution to get rid of trash on land,<br>
+                                make, <br>which are blown or thrown into the ocean.<br>  While that is a solution to get rid of trash on land,<br>
                                 it threatens the lives of marine life and therefore, needs to be reduced.<br> To fulfill the act, the following steps could be taken;</p>
                             <ul>
                                 <li>Stop the usage of plastic bags (Use reusable bags and bottles instead)</li>
@@ -207,27 +208,37 @@
                     <br>
                     <br>
                     <form>
-                        <label for = "bg"><span class = "bgLabel">change background theme</span></label>
+                        <label for = "bg1"><span class = "bgLabel">change background theme</span></label>
                         <input type="color" id="bg1" class = "bg" >
                     </form><br>
                 </div>
-                <span class = "exit"><button onclick = "hideEnlargement(section1)">&#10006;</button></span>
+                <span class = "exit"><button onclick = "hideEnlargement('section1')">&#10006;</button></span>
             </div>
             <div class = "enlarged" id = "section2">
                 <img src="images/target2.png" alt = "Protect and Restore Ecosystems">
                 <div id = "vertical">
                     <dl>
                         <dt><h4>Protect and Restore Ecosystems</h3></dt>
-                        <dd>Description for target2</dd>
+                        <dd>People are regularly damaging the ecosystem, but to save marine life,<br>
+                            it is essential to restore the damages that have already been done and make an effort to prevent the damages.<br>
+                            The following steps could be taken to protect and restore the ecosystem;<br>
+                            <ul>
+                                <li>Establishment of national parks, marine sanctuaries, and many more...</li>
+                                <li>Regulating laws and regulations to preserve the mentioned areas.</li>
+                                <li>Encouraging to plant native trees in deforested areas to restore forest ecosystems</li>
+                            </ul>
+                        
+                        
+                        </dd>
                     </dl>
                     <br>
                     <br>
                     <form>
-                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
-                        <input type="color" id="bg2" class = "bg" onchange="changeBackground(section1)">
+                        <label for = "bg2"><span class = "bgLabel"> change background theme</span></label>
+                        <input type="color" id="bg2" class = "bg" onchange="changeBackground('section2', this.color)">
                     </form><br>
                 </div>
-                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+                <span class = "exit"><button onclick = "hideEnlargement('section2')">&#10006;</button></span>
             </div>
             <div class = "enlarged" id = "section3">
                 <img src="images/target3.png" alt = "Reduce Ocean Acidification">
@@ -239,11 +250,11 @@
                     <br>
                     <br>
                     <form>
-                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
+                        <label for = "bg3"><span class = "bgLabel"> change background theme</span></label>
                         <input type="color" id="bg3" class = "bg" >
                     </form><br>
                 </div>
-                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+                <span class = "exit"><button onclick = "hideEnlargement('section3')">&#10006;</button></span>
             </div>
             <div class = "enlarged" id = "section4">
                 <img src="images/target4.png" alt = "Protect and Restore Ecosystems">
@@ -255,11 +266,11 @@
                     <br>
                     <br>
                     <form>
-                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
+                        <label for = "bg4"><span class = "bgLabel"> change background theme</span></label>
                         <input type="color" id="bg4" class = "bg" >
                     </form><br>
                 </div>
-                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+                <span class = "exit"><button onclick = "hideEnlargement('section4')">&#10006;</button></span>
             </div>
             <div class = "enlarged" id = "section5">
                 <img src="images/target5.png" alt = "Protect and Restore Ecosystems">
@@ -271,11 +282,11 @@
                     <br>
                     <br>
                     <form>
-                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
+                        <label for = "bg5"><span class = "bgLabel">change background theme</span></label>
                         <input type="color" id="bg5" class = "bg" >
                     </form><br>
                 </div>
-                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+                <span class = "exit"><button onclick = "hideEnlargement('section5')">&#10006;</button></span>
             </div>
             <div class = "enlarged" id = "section6">
                 <img src="images/target6.png" alt = "Protect and Restore Ecosystems">
@@ -287,11 +298,11 @@
                     <br>
                     <br>
                     <form>
-                        <label for = "bg"><span class = "bgLabel"> change background theme</span></label>
+                        <label for = "bg6"><span class = "bgLabel"> change background theme</span></label>
                         <input type="color" id="bg6" class = "bg" >
                     </form><br>
                 </div>
-                <span class = "exit"><button onclick = "hideEnlargement(section3)">&#10006;</button></span>
+                <span class = "exit"><button onclick = "hideEnlargement('section6')">&#10006;</button></span>
             </div>
             <br>
             <a href = "#top"><span> back to top </span></a>
@@ -299,14 +310,17 @@
         <footer></footer>
         <script>
             function showEnlargement(sectionId){
-                document.getElementById(sectionId).style.display = "block";
+                document.getElementById(sectionId).style.display = "inline-flex";
             }
             function hideEnlargement(sectionId){
                 document.getElementById(sectionId).style.display = "none";
             }
-            function changeBackground(section, colorId){
-                let color = document.querySelector('#${sectionId} #bg').value;
+            function changeBackground(sectionId, color){
                 document.getElementById(sectionId).style.backgroundColor = color;
+            }
+            function nextthreetargets(prev, next){
+                document.getElementById(prev).style.display = "none";
+                document.getElementById(next).style.display = "inline-flex";
             }
         </script>
     </body>
