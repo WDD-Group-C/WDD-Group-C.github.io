@@ -1,3 +1,4 @@
+/* Keyframes for fading in elements */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -46,6 +47,7 @@
     }
 }
 
+/* Keyframes for moving elements up */
 @keyframes moveUp {
     0% {
         transform: translateY(0)
@@ -86,13 +88,21 @@
     }
 }
 
+/* Global CSS reset */
+* {
+    box-sizing: border-box
+}
+
+/* Base styles for body and html */
 body,html {
     display: table;
     margin: 0;
     padding: 0;
-    font-family: Verdana,Geneva,Tahoma,sans-serif
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-text-size-adjust: 100%
 }
 
+/* Specific styling for body */
 body {
     background: #a9a9a9 url(../images/profile_background.jpg);
     background-size: cover;
@@ -102,7 +112,13 @@ body {
     height: 100vh;
     display: table-cell;
     vertical-align: middle;
-    text-align: center
+    text-align: center;
+}
+
+/* Styling for different elements */
+
+#heading {
+    color: darkblue;
 }
 
 #content-wrapper {
@@ -139,12 +155,12 @@ body {
 
 #steps {
     width: 23.436vw;
-    height: auto;
     background-color: #87ceeb;
     display: none;
     border-radius: 12px;
     line-height: 2
 }
+
 
 #promptText {
     margin-left: auto;
@@ -152,7 +168,6 @@ body {
 }
 
 #prompt {
-    width: 100%;
     min-width: 16.2775vw;
     height: 10.1625vh;
     background-color: #add8e6;
@@ -176,7 +191,7 @@ body {
     border: 1px solid gray;
     border-radius: 5px;
     overflow: auto;
-    -ms-overflow-style: none;
+    -ms-overflow-style: none; /* Disable scrollbar but still have functionality for scrolling */
     scrollbar-width: none
 }
 
@@ -202,6 +217,7 @@ body {
     box-shadow: 0 0 0 2px red
 }
 
+/* Disable animations for people who prefer reduced motions (Accessability) */
 @media (prefers-reduced-motion:reduce) {
     .fade-in,.move-up {
         animation: none
@@ -236,17 +252,18 @@ body {
     border-top: 1px solid #adff2f
 }
 
+/* Styling for the guide at the left side */
 #guide {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 9.765vw;
-    background-color: #f0f0f0;
+    width: 15vw;
+    background-color: lightskyblue;
     padding: 20px;
     overflow-y: auto;
     border-right: 1px solid #ccc;
-    text-align: left
+    text-align: left;
 }
 
 #guide h2 {
@@ -283,9 +300,19 @@ kbd {
     position: absolute;
     top: 0;
     right: 0;
-    font-weight: 700
+    font-weight: bold;
+    opacity: 0.3;
 }
 
+#prompt,#steps {
+    height: auto
+}
+
+ol {
+    list-style-type: decimal
+}
+
+/* Syling for smaller screens */
 @media (max-width:600px) {
     #content-wrapper {
         flex-direction: column
@@ -293,11 +320,6 @@ kbd {
 
     #output,.Button {
         width: auto
-    }
-
-    #prompt,#steps {
-        width: 100%;
-        margin: 0 auto
     }
 
     #guide {
@@ -317,8 +339,11 @@ kbd {
     }
 
     #prompt,#steps {
-        width: 90vw;
-        height: auto
+        margin: 0 auto;
+    }
+
+    #steps {
+        width: 90vw
     }
 
     #prompt {
@@ -338,7 +363,7 @@ kbd {
         padding: 10px;
         margin-top: 20px;
         overflow-y: visible;
-        border-right: none
+        border-right: none;
     }
 
     #guide h2 {
@@ -355,7 +380,7 @@ kbd {
     }
 
     kbd {
-        font-size: 10px
+        font-size: 10px;
     }
 
     .fade-in,.move-up {
