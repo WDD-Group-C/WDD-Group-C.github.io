@@ -35,3 +35,5 @@
 !videos/
 !videos/*.mp3
 !videos/*.mp4
+!other stylesheets/
+!other stylesheets/*.css
