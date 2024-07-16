@@ -6,409 +6,302 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Gallery</title><!--Title to be appeared in the top of the browser window-->
         <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "gallery.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <!--The style tag is used to decorate the page by setting fonts, colors, margins, etc...-->
-        <style>
-            h1{
-                text-align: center;
-                font-family: 'Georgia', serif;
-                color: rgb(78, 73, 224);
-
-            }
-            main{
-                background-color: rgb(164, 206, 222);
-            }
-            .galleryImages img{
-                height: 330px;
-                width: 270px;
-               
-            }
-            .galleryImages{
-                width: fit-content;
-                margin: auto;
-            }
-            .nextgalleryImages{
-                display : none;
-                width: fit-content;
-                margin: auto;
-            }
-            .nextgalleryImages img{
-                height: 330px;
-                width: 270px;
-            }
-
-            .target{
-                display: inline-block;
-                overflow: hidden;
-                margin: 2px;
-                border: 1px solid lightblue;
-            }
-
-            div.target:hover {
-                border: 1.3px solid rgb(7, 10, 85);
-            }
-
-            div.target p{
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-                width: 200px;
-                text-align: center;
-                padding: 15px;
-            }
-            #left, #right{
-                width: 100px;
-                color:rgb(9, 40, 237);
-                background-color: antiquewhite;
-                font-size: 1.5em;
-
-            }
-
-            #leftAndRightArrows{
-                border: 1px;
-                width: fit-content;
-                display: flex;
-                margin: 0 auto;
-                gap: 20px;
-                padding-top: 50px;
-            }
-
-            #left:hover {
-              color:black;
-              background-color: rgb(251, 225, 191);  
-            }
-
-            #right:hover {
-                color: black;
-                background-color: rgb(251, 225, 191);
-            }
-
-            a{
-                display: block;
-                text-align: center;
-                font-family: cursive;
-            }
-            a:visited{
-                color:blue
-            }
-            a:hover {
-                color: red;
-            }
-            a span:active {
-                background-color: yellow; 
-            }
-            .enlarged{ /*this block will be hidden unless the user clicks a target*/
-                background-color: rgb(221, 219, 218);
-                border-radius: 4px;
-                display: none; /*or else it will be inline-flex*/
-                width: auto;
-                margin: auto;
-
-            }
-            .enlarged img{
-                width: 530px;
-                height: 450px;
-                border-radius: 3px;
-                padding: 30px;
-            }
-
-            .enlarged dt, dd{
-                margin-bottom: 10px;
-            }
-            .enlarged dt{
-                color:rgb(53, 78, 200);
-            }
-            .enlarged dd{
-                color:rgb(44, 129, 204)
-            }
-
-            .enlarged dl, form{
-                padding: 2px;
-            }
-            .enlarged .bg{
-                width: 45px;
-                height: 45px;
-
-            }
-            #vertical{
-                border: 1px ridge rgb(46, 105, 194);
-                margin: 15px;
-                width: max-content;
-            }
-            #vertical dt dd p, ul{
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            }
-            #bgLabel{
-                size: 0.5em;
-            }
-            .exit{
-                width: min-content;
-                color: black;
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            }
-
-        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="gallery.js"></script>
     </head>
     <body>
-        <header><!--this section appears at the top of the page-->
-        </header>
-        <main>
-            <h1 id = "top">Gallery</h1><!--Main heading-->
-            <div id = "leftAndRightArrows"><!--IDs are accessed using '#' in css-->
-                <button id = "left" onclick="nextthreetargets('nextgalleryimages', 'galleryimages')">&larr;</button>
-                <button id = "right" onclick="nextthreetargets('galleryimages', 'nextgalleryimages')">&rarr;</button>
-            <!--buttons call certain functions when they are clicked by the user-->
-            </div>
-            <div class = "galleryImages" id = "galleryimages"><!--clases are accessed usinf '.' in css-->
-                <!--target thumbnails-->
-                <div class = "target" id = "target1" onclick = "showEnlargement('section1')">
-                    <img src="images/target1.png" alt = "Reduce Marine Pollution"><!--alt is used to describe the picture if it is unaccessible is certain browsers-->
-                    <p>Reduce Marine Pollution</p><!--Thumbnail description -->>
+        <header>
+            <nav>
+                <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
+                <div class="nav-link">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li>
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="feedback.html">FEEDBACK</a></li>
+                        <li><a href="site.html">SITE MAP</a></li>
+                        <li><a href="">ABOUT US</a></li>
+                    </ul>
                 </div>
-                <div class = "target" id = "target2" onclick = "showEnlargement('section2')">
-                    <img src = "images/target2.png" alt = "Protect and Restore Ecosystems">
-                    <p>Protect and Restore Ecosystems</p>
+            </nav>
+            </header>
+        <main><!-- main content goes here -->
+            <h1>Gallery</h1>
+            <section>
+                <div class="slideshow">
+                    <button id="left">&larr;</button>
+                    <img src="images/target11.png" alt="blap">
+                    <div id="thumbnails"></div>
+                    <button id="right">&rarr;</button>
                 </div>
-                <div class = "target" id = "target3" onclick = "showEnlargement('section3')">
-                    <img src="images/target3.png" alt = "Reduce Ocean Acidification">
-                    <p>Reduce Ocean Acidification</p>
+                <div id = "targets">
+                    <div id="target1">
+                        <img src="images/target11.png" alt = "Reducing Marine Pollution">
+                        <p>Reducing Marine Pollution</p>
+                    </div>
+                    <div id="target2">
+                        <img src="images/target2.png" alt = "Protect and Restore Ecosystems">
+                        <p>Protect and Restore Ecosystems</p>
+                    </div>
+                    <div id="target3">
+                        <img src="images/target3.png" alt = "Reduce Ocean Acidification ">
+                        <p>Reduce Ocean Acidification</p>
+                    </div>
+                    <div id="target4">
+                        <img src="images/target4.png" alt = "Sustainable Fishing">
+                        <p>Sustainable Fishing</p>
+                    </div>
+                    <div id="target5">
+                        <img src="images/target5.png" alt = "Conserve Coastal and marine Areas">
+                        <p>Conserve Coastal and marine Areas</p>
+                    </div>
+                    <div id="target6">
+                        <img src="images/target6.png" alt = "End Subsidies Contributing to Overfishing">
+                        <p>End Subsidies Contributing to Overfishing</p>
+                    </div>
                 </div>
-                    
-            </div><!--the next three thumbnails will appear when the right arrow is clicked-->
-            <div class = "nextgalleryImages" id = "nextgalleryimages">
-                <!--target thumbnails-->
-                <div class = "target" id = "target4" onclick = "showEnlargement('section4')">
-                    <img src="images/target4.png" alt = "Sustainable fishing">
-                    <p>Sustainable Fishing</p>
-                </div>
-                <div class = "target" id = "target5" onclick = "showEnlargement('section5')">
-                    <img src = "images/target5.png" alt = "Conserve Coastal and Marine Areas">
-                    <p>Conserve Coastal and Marine Areas</p>
-                </div>
-                <div class = "target" id = "target6" onclick = "showEnlargement('section6')">
-                    <img src="images/target6.png" alt = "End Subsidies Contributing to OverFishing">
-                    <p>End Subsidies Contributing to OverFishing</p>
-                </div>
-                    
-            </div>
-            <div class = "enlarged" id = "section1"><!--this section displays an enlarged version of each image in the thumbnail and provides a brief description -->
-                <img src="images/target1.png" alt = "Reduce Marine Pollution">
-                <div id = "vertical">
-                    <dl>
-                        <dt><h4>Reduce Marine Pollution</h4></dt><!--heading of the enlarged content is smaller in size compared to the main heading since h4 is used-->
-                        <dd>
-                            Marine pollution is the combination of chemicals and trash humans 
-                                make, <br>which are blown or thrown into the ocean.<br>  
-                                While that is a solution to get rid of trash on land,<br>
-                                it threatens the lives of marine life and therefore, needs to be reduced.<br> 
-                                To fulfill the act, the following steps could be taken;
+                <div class = "popups">
+                    <div id="popup1">
+                        <div id="flex">
+                            <span id="image"><img src="images/target11.png" alt="Reduce Marine Pollution"></span>
+                            <span id="heading"><h3>Reduce Marine Pollution</h3></span>
+                            <span class = "exitButton"><button onclick = "hidepopup('popup1')">X</button></span>
+                        </div>
+                        <hr>
+                        <div id="description1">
+                            <p>Marine pollution is the combination of chemicals and trash humans make,
+                            which are blown or thrown into the ocean.  While that is a solution to get rid of trash on land,
+                            it threatens the lives of marine life and therefore, needs to be reduced. 
+                            To fulfill the act, the following steps could be taken;</p><br>
                             <ul>
-                                <li>Stop the usage of plastic bags (Use reusable bags and bottles instead)</li><!--strategies are mentioned using an unordered list-->
+                                <li>Stop the usage of plastic bags (Use reusable bags and bottles instead)</li>
                                 <li>Get together as a community to clean rivers and beaches</li>
                                 <li>Avoid littering</li>
                                 <li>Proper disposal of trash</li>
                             </ul>
-                        </dd>
-                    </dl>
-                    <br>
-                    <br>
-                    <form>
-                        <label for = "bg1"><span class = "bgLabel">change background theme</span></label>
-                        <input type = "color" id = "bg1" class = "bg" onchange="changeBackground('section1', this.value)"><!--the user is able to change the backround color of the enlarged portion-->
-                        <label for = "changefont">Change the Font</label>
-                        <select name = "fonts" id = "fonts" onchange="changefont('vertical', this.value)"><!--the font can also be changed by the user-->
-                            <option value = "Arial">Arial</option>
-                            <option value = "Verdana">Verdana</option>
-                            <option value = "Georgia">Georgia</option>
-                            <option value = "Times New Roman">Times New Roman</option>
-                            <option value = "Comic Sans MS">Comic Sans MS</option>
-                        </select>
-                    </form><br>
+                        </div>
+                        <div id="changeProperties">
+                            <div id="colorchange">
+                                <label for="changeColor">Change the background color</label>
+                                <input type="color" name="color" id="changeColor" onchange = "changeBackground('description1', this.value)">
+                                </div>
+                            <div id="fontchange">
+                                <label for="changeFont">Change the background font</label>
+                                <select name="font" id="changeFont" onchange = "changeFont('description1', this.value)">
+                                <!--this.value returns the value of the font which will be used in the method, defined in the script tag to change the font to the choice of the user's-->
+                                    <option value = "Arial">Arial</option>
+                                    <option value = "Verdana">Verdana</option>
+                                    <option value = "Georgia">Georgia</option>
+                                    <option value = "Times New Roman">Times New Roman</option>
+                                    <option value = "Comic Sans MS">Comic Sans MS</option>
+                                </select>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
                 </div>
-                <span class = "exit"><button onclick = "hiddenEnlargement('section1')">&#10006;</button></span>
-            </div>
-            <div class = "enlarged" id = "section2">
-                <img src="images/target2.png" alt = "Protect and Restore Ecosystems">
-                <div id = "vertical">
-                    <dl>
-                        <dt><h4>Protect and Restore Ecosystems</h4></dt>
-                        <dd>People are regularly damaging the ecosystem, but to save marine life,<br>
-                            it is essential to restore the damages that have already been done<br> 
-                            and make an effort to prevent the damages.<br>
-                            The following steps could be taken to protect and restore the ecosystem;<br>
+                <div class = "popups">
+                    <div id="popup2">
+                        <div id="flex">
+                            <span id="image"><img src="images/target11.png" alt="Protect and Restore Ecosystems"></span>
+                            <span id="heading"><h3>Protect and Restore Ecosystems</h3></span>
+                            <span class = "exitButton"><button onclick = "hidepopup('popup2')">X</button></span>
+                        </div>
+                        <hr>
+                        <div id="description2">
+                            <p>People are regularly damaging the ecosystem, but to save marine life, 
+                                it is essential to restore the damages that have already been done and make an effort 
+                                to prevent the damages. The following steps could be taken to protect and restore the ecosystem;</p><br>
                             <ul>
                                 <li>Establishment of national parks, marine sanctuaries, and many more...</li>
-                                <li>Regulating laws and regulations to preserve the mentioned areas.</li>
-                                <li>Encouraging to plant native trees in deforested 
-                                    <br>areas to restore forest ecosystems</li>
-                            </ul>           
-                        
-                        </dd>
-                    </dl>
-                    <br>
-                    <br>
-                    <form>
-                        <label for = "bg2"><span class = "bgLabel">change background theme</span></label>
-                        <input type="color" id="bg2" class="bg" onchange="changeBackground('section2', this.value)">
-                        <label for = "changefont">Change the Font</label>
-                        <select name = "fonts" id = "fonts" onchange="changefont('vertical', this.value)">
-                            <option value = "Arial">Arial</option>
-                            <option value = "Verdana">Verdana</option>
-                            <option value = "Georgia">Georgia</option>
-                            <option value = "Times New Roman">Times New Roman</option>
-                            <option value = "Comic Sans MS">Comic Sans MS</option>
-                        </select>
-                    </form><br>
+                                <li>Regulating laws and regulations to preserve the mentioned areas</li>
+                                <li>Encouraging to plant native trees in deforested areas to restore forest ecosystems</li>
+                            </ul>
+                        </div>
+                        <div id="changeProperties">
+                            <div id="colorchange">
+                                <label for="changeColor">Change the background color</label>
+                                <input type="color" name="color" id="changeColor" onchange = "changeBackground('description2', this.value)">
+                                </div>
+                            <div id="fontchange">
+                                <label for="changeFont">Change the background font</label>
+                                <select name="font" id="changeFont" onchange = "changeFont('description2', this.value)">
+                                    <option value = "Arial">Arial</option>
+                                    <option value = "Verdana">Verdana</option>
+                                    <option value = "Georgia">Georgia</option>
+                                    <option value = "Times New Roman">Times New Roman</option>
+                                    <option value = "Comic Sans MS">Comic Sans MS</option>
+                                </select>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
                 </div>
-                <span class = "exit"><button onclick = "hiddenEnlargement('section2')">&#10006;</button></span>
-            </div>
-            <div class = "enlarged" id = "section3">
-                <img src="images/target3.png" alt = "Reduce Ocean Acidification">
-                <div id = "vertical">
-                    <dl>
-                        <dt><h4>Protect and Restore Ecosystems</h4></dt>
-                        <dd>Ocean acidification occurs when the PH value decreases for a long period,
-                            <br>caused by the intake of carbon dioxide (CO)2.
-                            <br>this poses threats to the coral reefs, shellfish and various other marine organisms.
-                            <br>Following are some strategies to prevent ocean acidification;
+                <div class = "popups">
+                    <div id="popup3">
+                        <div id="flex">
+                            <span id="image"><img src="images/target11.png" alt="Reduce Ocean Acidification"></span>
+                            <span id="heading"><h3>Reduce Ocean Acidification</h3></span>
+                            <span class = "exitButton"><button onclick = "hidepopup('popup3')">X</button></span>
+                        </div>
+                        <hr>
+                        <div id="description3">
+                            <p>Ocean acidification occurs when the PH value decreases for a long period caused by the 
+                                intake of carbon dioxide (CO)2. this poses threats to the coral reefs, 
+                                shellfish and various other marine organisms. Following are some 
+                                strategies to prevent ocean acidification;</p><br>
                             <ul>
                                 <li>Increasing the use of solar winds and hydroelectric power</li>
-                                <li>Promoting energy efficiency </li>
+                                <li>Promoting energy efficiency</li>
                                 <li>Reducing the reliance on fossil fuels</li>
                             </ul>
+                        </div>
+                        <div id="changeProperties">
+                            <div id="colorchange">
+                                <label for="changeColor">Change the background color</label>
+                                <input type="color" name="color" id="changeColor" onchange = "changeBackground('description3', this.value)">
+                                </div>
+                            <div id="fontchange">
+                                <label for="changeFont">Change the background font</label>
+                                <select name="font" id="changeFont" onchange = "changeFont('description3', this.value)">
+                                    <option value = "Arial">Arial</option>
+                                    <option value = "Verdana">Verdana</option>
+                                    <option value = "Georgia">Georgia</option>
+                                    <option value = "Times New Roman">Times New Roman</option>
+                                    <option value = "Comic Sans MS">Comic Sans MS</option>
+                                </select>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class = "popups">
+                    <div id="popup4">
+                        <div id="flex">
+                            <span id="image"><img src="images/target11.png" alt="Sustainable Fishing"></span>
+                            <span id="heading"><h3>Sustainable Fishing</h3></span>
+                            <span class = "exitButton"><button onclick = "hidepopup('popup4')">X</button></span>
+                        </div>
+                        <hr>
+                        <div id="description4">
+                            <p>Sustainable fishing is a good approach as it respects marine systems by adapting to the 
+                                natural reproductive rates of fish, maintains a balance, and ensures their survival. 
+                                These methods help avoid capturing species that do not contain commercial value</p><br>
 
-                        </dd>
-                    </dl>
-                    <br>
-                    <br>
-                    <form>
-                        <label for = "bg3"><span class = "bgLabel">change background theme</span></label>
-                        <input type="color" id="bg3" class = "bg" >
-                        <label for = "changefont">Change the Font</label>
-                        <select name = "fonts" id = "fonts" onchange="changefont('vertical', this.value)">
-                            <option value = "Arial">Arial</option>
-                            <option value = "Verdana">Verdana</option>
-                            <option value = "Georgia">Georgia</option>
-                            <option value = "Times New Roman">Times New Roman</option>
-                            <option value = "Comic Sans MS">Comic Sans MS</option>
-                        </select>
-                    </form><br>
+                        </div>
+                        <div id="changeProperties">
+                            <div id="colorchange">
+                                <label for="changeColor">Change the background color</label>
+                                <input type="color" name="color" id="changeColor" onchange = "changeBackground('description4', this.value)">
+                                </div>
+                            <div id="fontchange">
+                                <label for="changeFont">Change the background font</label>
+                                <select name="font" id="changeFont" onchange = "changeFont('description4', this.value)">
+                                    <option value = "Arial">Arial</option>
+                                    <option value = "Verdana">Verdana</option>
+                                    <option value = "Georgia">Georgia</option>
+                                    <option value = "Times New Roman">Times New Roman</option>
+                                    <option value = "Comic Sans MS">Comic Sans MS</option>
+                                </select>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
                 </div>
-                <span class = "exit"><button onclick = "hiddenEnlargement('section3')">&#10006;</button></span>
-            </div>
-            <div class = "enlarged" id = "section4">
-                <img src="images/target4.png" alt = "Protect and Restore Ecosystems">
-                <div id = "vertical">
-                    <dl>
-                        <dt><h4>Protect and Restore Ecosystems</h4></dt>
-                        <dd>Sustainable fishing is a good approach as it respects marine systems<br> 
-                            by adapting to the natural reproductive rates of fish, maintains a balance,<br> 
-                            and ensures their survival. These methods help avoid capturing species<br> 
-                            that do not contain commercial value.
-                        </dd>
-                    </dl>
-                    <br>
-                    <br>
-                    <form>
-                        <label for = "bg4"><span class = "bgLabel">change background theme</span></label>
-                        <input type="color" id="bg4" class = "bg" >
-                        <label for = "changefont">Change the Font</label>
-                        <select name = "fonts" id = "fonts" onchange="changefont('section1', this.value)">
-                            <option value = "Arial">Arial</option>
-                            <option value = "Verdana">Verdana</option>
-                            <option value = "Georgia">Georgia</option>
-                            <option value = "Times New Roman">Times New Roman</option>
-                            <option value = "Comic Sans MS">Comic Sans MS</option>
-                        </select>
-                    </form><br>
-                </div>
-                <span class = "exit"><button onclick = "hiddenEnlargement('section4')">&#10006;</button></span>
-            </div>
-            <div class = "enlarged" id = "section5">
-                <img src="images/target5.png" alt = "Protect and Restore Ecosystems">
-                <div id = "vertical">
-                    <dl>
-                        <dt><h4>Protect and Restore Ecosystems</h4></dt>
-                        <dd>Conserving the coastal and marine areas is crucial to ensure the health of the marine ecosystems.<br>
-                            Additionally, it is vital to maintain biodiversity and sustain fisheries.<br>
-                            Following are some ways to conserve coastal and marine areas
+                <div class = "popups">
+                    <div id="popup5">
+                        <div id="flex">
+                            <span id="image"><img src="images/target11.png" alt="Conserve Coastal and marine Areas"></span>
+                            <span id="heading"><h3>Conserve Coastal and marine Areas</h3></span>
+                            <span class = "exitButton"><button onclick = "hidepopup('popup5')">X</button></span>
+                        </div>
+                        <hr>
+                        <div id="description5">
+                            <p>Conserving the coastal and marine areas is crucial to ensure the health of the marine ecosystems. 
+                                Additionally, it is vital to maintain biodiversity and sustain fisheries. 
+                                Following are some ways to conserve coastal and marine areas;</p><br>
                             <ul>
-                                <li>Create zones within the MPA to prohibit all extractive activities.</li>
+                                <li>Create zones within the MPA to prohibit all extractive activities</li>
                                 <li>Strengthen regulations to prevent oil spills and reduce their impact</li>
-                                <li>Save mangrove forests </li>
+                                <li>Save mangrove forests</li>
                             </ul>
-                        </dd>
-                    </dl>
-                    <br>
-                    <br>
-                    <form>
-                        <label for = "bg5"><span class = "bgLabel">change background theme</span></label>
-                        <input type="color" id="bg5" class = "bg" >
-                        <label for = "changefont">Change the Font</label>
-                        <select name = "fonts" id = "fonts" onchange="changefont('vertical', this.value)">
-                            <option value = "Arial">Arial</option>
-                            <option value = "Verdana">Verdana</option>
-                            <option value = "Georgia">Georgia</option>
-                            <option value = "Times New Roman">Times New Roman</option>
-                            <option value = "Comic Sans MS">Comic Sans MS</option>
-                        </select>
-                    </form><br>
+                        </div>
+                        <div id="changeProperties">
+                            <div id="colorchange">
+                                <label for="changeColor">Change the background color</label>
+                                <input type="color" name="color" id="changeColor" onchange = "changeBackground('description5', this.value)">
+                                </div>
+                            <div id="fontchange">
+                                <label for="changeFont">Change the background font</label>
+                                <select name="font" id="changeFont" onchange = "changeFont('description5', this.value)">
+                                    <option value = "Arial">Arial</option>
+                                    <option value = "Verdana">Verdana</option>
+                                    <option value = "Georgia">Georgia</option>
+                                    <option value = "Times New Roman">Times New Roman</option>
+                                    <option value = "Comic Sans MS">Comic Sans MS</option>
+                                </select>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
                 </div>
-                <span class = "exit"><button onclick = "hiddenEnlargement('section5')">&#10006;</button></span>
-            </div>
-            <div class = "enlarged" id = "section6">
-                <img src="images/target6.png" alt = "Protect and Restore Ecosystems">
-                <div id = "vertical">
-                    <dl>
-                        <dt><h4>Protect and Restore Ecosystems</h4></dt>
-                        <dd>By ending subsidies that contribute to overfishing, we can ensure long-term health<br>
-                            of marine ecosystems and the communities that are dependent on them.<br>
-                            Following are some ways to do so
+                <div class = "popups">
+                    <div id="popup6">
+                        <div id="flex">
+                            <span id="image"><img src="images/target11.png" alt="End Subsidies Contributing to Overfishing"></span>
+                            <span id="heading"><h3>End Subsidies Contributing to Overfishing</h3></span>
+                            <span class = "exitButton"><button onclick = "hidepopup('popup6')">X</button></span>
+                        </div>
+                        <hr>
+                        <div id="description6">
+                            <p>By ending subsidies that contribute to overfishing, 
+                                we can ensure long-term health of marine ecosystems and the communities that are dependent on them. 
+                                Following are some ways to do so.</p><br>
                             <ul>
-                                <li>Increase the number of individuals who monitor<br>
-                                    fishing activities and enforce laws related to subsidy reforms</li>
-                                <li>Collaborate with national parties to develop<br>
-                                    coordinated strategies to reduce overfishing</li>
+                                <li>Increase the number of individuals who monitor fishing activities and enforce laws related to subsidy reforms</li>
+                                <li>Collaborate with national parties to develop coordinated strategies to reduce overfishing</li>
                                 <li>Provide fishers with training to adapt to sustainable practices</li>
                             </ul>
-                        </dd>
-                    </dl>
-                    <br>
-                    <br>
-                    <form>
-                        <label for = "bg6"><span class = "bgLabel">change background theme</span></label>
-                        <input type="color" id="bg6" class = "bg" >
-                        <label for = "changefont">Change the Font</label>
-                        <select name = "fonts" id = "fonts" onchange="changefont('vertical', this.value)">
-                            <option value = "Arial">Arial</option>
-                            <option value = "Verdana">Verdana</option>
-                            <option value = "Georgia">Georgia</option>
-                            <option value = "Times New Roman">Times New Roman</option>
-                            <option value = "Comic Sans MS">Comic Sans MS</option>
-                        </select>
-                    </form><br>
+                        </div>
+                        <div id="changeProperties">
+                            <div id="colorchange">
+                                <label for="changeColor">Change the background color</label>
+                                <input type="color" name="color" id="changeColor" onchange = "changeBackground('description6', this.value)">
+                                </div>
+                            <div id="fontchange">
+                                <label for="changeFont">Change the background font</label>
+                                <select name="font" id="changeFont" onchange = "changeFont('description6', this.value)">
+                                    <option value = "Arial">Arial</option>
+                                    <option value = "Verdana">Verdana</option>
+                                    <option value = "Georgia">Georgia</option>
+                                    <option value = "Times New Roman">Times New Roman</option>
+                                    <option value = "Comic Sans MS">Comic Sans MS</option>
+                                </select>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
                 </div>
-                <span class = "exit"><button onclick = "hiddenEnlargement('section6')">&#10006;</button></span>
-            </div>
-            <br>
-            <a href = "#top"><span> back to top </span></a>
+                
+            </section>
         </main>
-        <footer></footer>
-        <script>
-            function showEnlargement(sectionId){
-                document.getElementById(sectionId).style.display = "inline-flex";
-            }
-            function hiddenEnlargement(sectionId){
-                document.getElementById(sectionId).style.display = "none";
-            }
-            function changeBackground(sectionId, color){
-                document.getElementById(sectionId).style.backgroundColor = color;
-            }
-            function nextthreetargets(prev, next){
-                document.getElementById(prev).style.display = "none";
-                document.getElementById(next).style.display = "inline-flex";
-            }
-            function changefont(section, font){
-                document.getElementById(section).style.font = font;
-            }
-        </script>
+        <footer>
+            <h4>About Us</h4>
+            <p style="color: white;">Welcome to Life Below Water, a passionate community dedicated to preserving our marine ecosystems. Our journey began with a simple idea to protect and conserve the beauty and biodiversity of our oceans.Join us as we work together to ensure a sustainable and thriving ocean for future generations.</p>
+            <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="pageEditor.html"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
+            <p style="color: white;">copyright ©2024. Designed by Sarah Aleesha Samuel</p>
+        </footer>
     </body>
 </html>
