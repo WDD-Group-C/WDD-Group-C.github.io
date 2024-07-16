@@ -94,7 +94,7 @@
       }
 
       body {
-          background: darkgray url(images/profile_background.jpg);
+          background: darkgray url(../images/profile_background.jpg);
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
