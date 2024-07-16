@@ -1,10 +1,3 @@
-<!--TODO:
-
-Make comments and make comments better
-Have validation checks for input
-Some code styling is weird so change that
--->
-
 <!--
 Keyboard Controls:
 
@@ -17,80 +10,89 @@ Can move through the "Skipped" prompts by hitting tab once and then pressing the
 
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profile Registration</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="otherstylesheets/profile.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <div id="content-wrapper">
-      <header>
-          <h1 id="heading">PROFILE CREATOR</h1>
-          <span id="freePik">Background designed by Freepik</span>
-      </header>
-      
-      <main>
+   <head>
+      <!-- Meta tags for character set, viewport, and compatibility with internet explorer -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <aside id="guide">
-          <h2>Using the Profile Creator</h2>
-          <ul>
-            <li>Click the <kbd>START</kbd> button to begin the registration process.</li>
-            <li>Use the <kbd>Next</kbd> button to submit your response and proceed to the next question.</li>
-            <li>Click the <kbd>Skip</kbd> button to skipp the current question.</li>
-            <li>Click on the box above the <kbd>Next</kbd> and <kbd>Skip</kbd> buttons to select the prompt box and enter text.</li>
-          </ul>
-          <h2>Keyboard Controls</h2>
-          <ul>
-            <li><kbd>P</kbd> - Focuses on the prompt box for entering text.</li>
-            <li><kbd>N</kbd> - Submits the current response and moves to the next question.</li>
-            <li><kbd>S</kbd> - Skips the current question.</li>
-            <li><kbd>Enter</kbd> - Starts the creator or to finish submitting a skipped prompt.</li>
-            <li>Use <kbd>Tab</kbd> to navigate through "Skipped" prompts, then use <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows to move between them.</li>
-          </ul>
-        </aside>
+      <title>Profile Registration</title>
 
-        <div class="Button" id="startButton">START</div>
+      <!-- External stylesheets -->
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="otherstylesheets/profile.css">
+      <!-- Favicon for the website -->
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-        <div id="steps-container">
+   </head>
+   <body>
+      <!-- Wrapper for the entire content -->
+      <div id="content-wrapper">
+         <!-- Header section -->
+         <header>
+            <h1 id="heading">PROFILE CREATOR</h1>
 
-          <div id="steps">
+            <!-- Attribution for background design -->
+            <span id="freePik">Background designed by Freepik</span>
 
-            <div id="stepText"></div>
+         </header>
+         <main>
+            <!-- Sidebar with instructions -->
+            <aside id="guide">
+               <h2>Using the Profile Creator</h2>
 
-            <span id="promptText">Prompt</span>
+               <!-- List of instructions -->
+               <ul>
+                  <li>Click the <kbd>START</kbd> button to begin the registration process.</li>
+                  <li>Use the <kbd>Next</kbd> button to submit your response and proceed to the next question.</li>
+                  <li>Click the <kbd>Skip</kbd> button to skip the current question.</li>
+                  <li>Click on the box above the <kbd>Next</kbd> and <kbd>Skip</kbd> buttons to select the prompt box and enter text.</li>
+               </ul>
+               <h2>Keyboard Controls</h2>
 
-            <div id="prompt">
-              <span id="questionText"></span>
-              <div id="promptBox" contenteditable="true" spellcheck="false"></div>
+               <!-- List of keyboard shortcuts -->
+               <ul>
+                  <li><kbd>P</kbd> - Focuses on the prompt box for entering text.</li>
+                  <li><kbd>N</kbd> - Submits the current response and moves to the next question.</li>
+                  <li><kbd>S</kbd> - Skips the current question.</li>
+                  <li><kbd>Enter</kbd> - Starts the creator or to finish submitting a skipped prompt.</li>
+                  <li>Use <kbd>Tab</kbd> to navigate through "Skipped" prompts, then use <kbd>&uarr;</kbd> and <kbd>&darr;</kbd> arrows to move between them.</li>
+               </ul>
+            </aside>
+
+            <div class="Button" id="startButton">START</div>
+            
+            <!-- Container for steps -->
+            <div id="steps-container">
+               <div id="steps">
+                  <div id="stepText"></div>
+
+                  <span id="promptText">Prompt</span>
+                  <div id="prompt">
+                     <span id="questionText"></span>
+
+                     <!-- Content-editable box for user input -->
+                     <div id="promptBox" contenteditable="true" spellcheck="false"></div>
+
+                  </div>
+
+                  <div class="Button" id="nextButton">Next</div>
+                  <div class="Button" id="skipButton">Skip</div>
+
+               </div>
             </div>
 
-            <div class="Button" id="nextButton">Next</div>
-            <div class="Button" id="skipButton">Skip</div>
+            <!-- Progress bar indicating completion percentage -->
+            <span id="progressText">Profile completed 0%</span>
+            <progress value="0" max="100" id="progressBar"></progress>
 
-          </div>
+            <!-- Output displayed from user input -->
+            <span id="outputText">Output</span>
+            <div id="output" aria-live="polite"></div>
+         </main>
+      </div>
 
-        </div>
-
-        <span id="progressText">Profile completed 0%</span>
-        <progress value="0" max="100" id="progressBar"></progress>
-
-
-        <span id="outputText">Output</span>
-        <div id="output" aria-live="polite"></div>
-
-      </main>
-      
-      <footer>
-        <!--Footer stuff for later-->
-      </footer>
-    </div>
-
-    <script src="scripts/profile.js"></script>
-    
-  </body>
+      <!-- JavaScript file for interactive functionality -->
+      <script src="scripts/profile.js"></script>
+   </body>
 </html>
