@@ -1,0 +1,220 @@
+/*nav*/
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left:0%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+nav{
+    display: flex;
+    padding: 1.5% 3%;
+    padding-left: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 190px;
+}
+
+.nav-link{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-link ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.nav-link ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link ul li:hover::after{
+    width: 100%;
+
+}
+/*nav*/
+.B{
+    /* width: 300px; */
+    /* margin-right: 20px; */
+    flex: 1;
+   
+  
+}
+
+    
+    
+
+
+body {
+    background-color: #0011ff07;  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.top-heading {
+    background-image: url(assets/merch/85b6ffbfb14f79e72b22efadecc74fed-save-the-ocean-lettering-banner-design.webp);
+    /* height: 80vh; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    margin-top: 70px;
+}
+
+.merch-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns to display merch */
+}
+
+.merch-image-file {
+    height: 300px; /* height of merch image */
+}
+
+.grid-item {
+    margin: 20px; 
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* shadow effect */
+}
+
+.shopping-cart-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-menu {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+}
+
+.shopping-cart-icon {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-buttons {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    display: flex;
+    gap: 10px;
+}
+
+.bottom-buttons button {
+    width: auto; 
+    height: auto; 
+    margin: 0; 
+    margin-top: 15px;
+}
+
+#checkout-button {
+    position: fixed;
+    bottom: 20px;
+    right: 250px;
+}
+
+#reset-button {
+    position: fixed;
+    bottom: 20px;
+    right: 150px;
+}
+
+#cart-total {
+    position: fixed;
+    bottom: 80px;
+    right: 200px;
+}
+
+.close-shopping-cart, .top-menu button {
+    width: auto;
+    height: auto;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+.shopping-cart-menu {
+    display: none; /* hide shopping cart menu by default */
+}
+
+li {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+
+}
+
+.footer p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer h4{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-weight: 600;
+    color: white;
+}
+
+.footer .fa-brands{
+    margin: 0 8px;
+    cursor: pointer;
+    padding: 18px 0;
+    color: white;
+}
+
+.footer .fa-regular{
+  margin: 0 8px;
+  cursor: pointer;
+  padding: 18px 0;
+  color: white;
+}
