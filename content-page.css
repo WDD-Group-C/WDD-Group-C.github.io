@@ -1,0 +1,186 @@
+/*nav*/
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left:0%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+nav{
+    display: flex;
+    padding: 1.5% 3%;
+    padding-left: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 190px;
+}
+
+.nav-link{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-link ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.nav-link ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link ul li:hover::after{
+    width: 100%;
+
+}
+/*nav*/
+
+    
+    
+body {
+    
+    background-image: url(assets/content-page/beautiful-color-palettes-combinations-schemes-office-room-2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: monospace;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.content-page-heading {
+    color: #71aae2;
+    font-size: 7rem;
+    font-style: italic;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    height: 80vh;
+    text-align: center;
+    align-items: center;
+    display:grid;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.anchor-container {
+    margin-top: 50px;
+    display:grid ;
+    position: fixed;
+    height: 80vh;
+    z-index: 1;
+    top: 100px;
+}
+
+.anchor-container a {
+    color: whitesmoke;
+}
+
+.parah-detail-container {
+    display: grid;
+    margin-left: 15%;
+    font-size: 1.2rem;
+}
+
+.parah-container {
+    background-image: url(assets/content-page/content-back.webp);
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border: 5px solid rgb(117, 132, 158);
+    border-radius: 50px;
+    margin: 5%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 20%;
+}
+
+.parah-content {
+    margin: 5%;
+    text-align: center;
+    align-items: center;
+    display:grid;
+    text-align: justify;
+    margin-top: 0;
+}
+
+.parah-heading {
+    font-size: 2rem;
+    text-align: center;
+    text-transform:uppercase;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0;
+    color: whitesmoke;
+}
+
+
+
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+
+}
+
+.footer p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer h4{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-weight: 600;
+    color: white;
+}
+
+.footer .fa-brands{
+    margin: 0 8px;
+    cursor: pointer;
+    padding: 18px 0;
+    color: white;
+}
+
+.footer .fa-regular{
+  margin: 0 8px;
+  cursor: pointer;
+  padding: 18px 0;
+  color: white;
+}
