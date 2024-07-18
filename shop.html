@@ -1,30 +1,159 @@
-
-<!-- Add a title and delete all the comments below including the comment in the script tag-->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Shop | Life Below Water</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+</head>
+<body>
     
-    	<script>
-        // Javascript goes here
-      </script>
-  </head>
-  <body>
-    <header>
-        <!-- Header content goes here -->
-    </header>
+    <section class="header">
+        <nav>
+            <a href="home.html"><img src="assets/WhatsApp Image 2024-07-15 at 16.43.48_7f2ec30d.jpg" alt="Logo"></a>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="">SHOP</a></li>
+                    <li><a href="">GALLARY</a></li>
+                    <li><a href="feedback.html">FEEDBACK</a></li>
+                    <li><a href="">SITE MAP</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+        <div class="B" id="shopping-cart">
+            <!-- shopping cart button -->
+            <button class="shopping-cart-icon nav-bar-button">
+                <span class="material-symbols-outlined">
+                    shopping_cart
+                </span>
+                <span class="cart-badge" id="cart-badge">0</span>
+            </button>
+        </div>
+    </div>
+    <div class="top-heading">
+        <!-- to display a blank image at the top -->
+    </div>
+
+    <!-- shopping cart menu which will reavel after clicking the shopping cart with the details of items in the cart -->
+    <div class="shopping-cart-menu" id="shopping-cart-menu">
+        <div class="top-menu">
+            <h2>Shopping Cart</h2>
+            <button class="nav-bar-button">
+                <span class="material-symbols-outlined close-shopping-cart" id="close-shopping-cart">
+                    cancel
+                </span>
+            </button>
+        </div>
+
+        <hr>
+        <ul id="cart-items-list">
+            <!-- blank list to display the list of items in the cart, which will be implemented through javaScript -->
+        </ul>
+        <div id="cart-total">Total: Rs. 0.00</div>
+        <div class="bottom-buttons">
+            <button class="nav-bar-button" id="checkout-button">Checkout</button>
+            <button class="nav-bar-button" id="reset-button">Reset</button>
+        </div>
+    </div>
     
-    <main>
-        <!-- Main content goes here. Should not contain any repeated content -->
-    </main>
-    
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
-  </body>
+    <!-- a 3*3 grid to display the merches -->
+    <div class="merch-grid-container">
+        <div class="grid-item">
+            <div class="merch-image">
+                <img src="assets/merch/a.jpg" class="merch-image-file">
+            </div>
+            <div class="merch-price">
+                <p>Rs. 2000.00</p>
+            </div>
+            <button class="add-to-cart-button nav-bar-button" data-item="more-ocean-less-plastic" data-price="2000.00" style="width: auto; height: auto; margin: 0; margin-top: 15px;">Add to Cart</button>
+        </div>
+
+        <div class="grid-item">
+            <div class="merch-image">
+                <img src="assets/merch/b.jpeg" class="merch-image-file">
+            </div>
+            <div class="merch-price">
+                Rs. 1000.00
+            </div>
+            <button class="add-to-cart-button nav-bar-button" data-item="keep-sea-plastic-free-1" data-price="1000.00" style="width: auto; height: auto; margin: 0; margin-top: 15px;">Add to Cart</button>
+        </div>
+
+        <div class="grid-item">
+            <div class="merch-image">
+                <img src="assets/merch/c.jpeg" class="merch-image-file">
+            </div>
+            <div class="merch-price">
+                Rs. 5000.00
+            </div>
+            <button class="add-to-cart-button nav-bar-button" data-item="save-sea-animals" data-price="5000.00" style="width: auto; height: auto; margin: 0; margin-top: 15px;">Add to Cart</button>
+        </div>
+
+        <div class="grid-item">
+            <div class="merch-image">
+                <img src="assets/merch/d.jpeg" class="merch-image-file">
+            </div>
+            <div class="merch-price">
+                Rs. 3500.00
+            </div>
+            <button class="add-to-cart-button nav-bar-button" data-item="keep-ocean-clean" data-price="3500.00" style="width: auto; height: auto; margin: 0; margin-top: 15px;">Add to Cart</button>
+        </div>
+
+        <div class="grid-item">
+            <div class="merch-image">
+                <img src="assets/merch/e.jpeg"  class="merch-image-file">
+            </div>
+            <div class="merch-price">
+                Rs. 3000.00
+            </div>
+            <button class="add-to-cart-button nav-bar-button" data-item="keep-sea-plastic-free-2" data-price="3000.00" style="width: auto; height: auto; margin: 0; margin-top: 15px;">Add to Cart</button>
+        </div>
+
+        <div class="grid-item">
+            <div class="merch-image">
+                <img src="assets/merch/f.jpeg"  class="merch-image-file">
+            </div>
+
+            <div class="merch-price">
+                Rs. 1500.00
+            </div>
+            <button class="add-to-cart-button nav-bar-button" data-item="save-the-whales" data-price="1500.00" style="width: auto; height: auto; margin: 0; margin-top: 15px;">Add to Cart</button>
+        </div>
+
+        <div class="grid-item">
+            <div class="merch-image">
+                <img src="assets/merch/g.jpeg"  class="merch-image-file">
+            </div>
+            <div class="merch-price">
+                Rs. 1500.00
+            </div>
+            <button class="add-to-cart-button nav-bar-button" data-item="save-the-ocean" data-price="1500.00" style="width: auto; height: auto; margin: 0; margin-top: 15px;">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p style="color: white;">Welcome to Life Below Water, a passionate community dedicated to preserving our marine ecosystems. Our journey began with a simple idea to protect and conserve the beauty and biodiversity of our oceans.Join us as we work together to ensure a sustainable and thriving ocean for future generations.</p>
+        <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+        </div>
+        <p style="color: white;">copyright ©2024. Designed by Ocean Action Hub</p>
+    </section>
+
+    <script src="shop.js"></script>
+
+</body>
 </html>

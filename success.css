@@ -1,0 +1,48 @@
+body {
+    background-color: #e5e5e5;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.row {
+    margin: auto;
+    padding-top: 100px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border: 1px solid #e5e5e5;
+    width: 400px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 1px;
+    display: block;
+    border-radius: 20px;
+    padding-bottom: 0px;
+}
+
+
+p {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #8bc349;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.material-symbols-outlined {
+    font-size: 70px;
+}
+

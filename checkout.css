@@ -1,0 +1,264 @@
+/*nav*/
+
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left:0%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+nav{
+    display: flex;
+    padding: 1.5% 3%;
+    padding-left: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 190px;
+}
+
+.nav-link{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-link ul li a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.nav-link ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link ul li:hover::after{
+    width: 100%;
+
+}
+/*nav*/
+body {
+    background-color:#0011ff07;
+    background-image: url(assets/Rfff.jpeg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000;
+    margin-top: 100px;
+}
+
+
+.cart-menu {
+    width: 25%;
+    border: 1px solid #000;
+    background-color: #325d76;
+    border-radius: 10px;
+    color: #f2f2f2;
+    padding: 25px;
+    height: fit-content;
+}
+
+.checkout-form {
+    width: 60%;
+    border: 1px solid #000;
+    background-color: #325d76;
+
+    border-radius: 10px;
+    color: #f2f2f2;
+    padding: 50px;
+    margin: 50px;
+}
+
+.cart-heading, .cart-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 120px;
+
+}
+
+.cart-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.shipping-details {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.form-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0px;
+    margin: 10px;
+}
+
+.form-input {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+label {
+    display: block;
+}
+
+.cardexpp {
+    display: flex;
+}
+
+.cardexpp input {
+    width: 60px;
+
+}
+
+.cardcvv input {
+    width: 60px;
+}
+
+input, select {
+    height: 30px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+select {
+    width: 200px;
+}
+
+.fa {
+    margin-right: 10px;
+}
+
+.btn-submit, .btn-cancel {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 400px;
+}
+
+.form-buttons {
+    padding: 10px 20px;
+    justify-content: center;
+}
+
+
+.btn-cancel {
+    background-color: #f44336;
+}
+
+.form-input {
+    display: flex;
+    gap: auto;
+}
+
+.form-input label {
+    display: block;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}   
+
+.form-label {
+    min-width: 150px;
+    text-align: start;
+}
+
+.main-container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+}
+
+.form-flex {
+    display: flex;
+}
+
+.required {
+    color: red;
+}
+
+
+
+
+
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+
+}
+
+.footer p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer h4{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-weight: 600;
+    color: white;
+}
+
+.footer .fa-brands{
+    margin: 0 8px;
+    cursor: pointer;
+    padding: 18px 0;
+    color: white;
+}
+
+.footer .fa-regular{
+  margin: 0 8px;
+  cursor: pointer;
+  padding: 18px 0;
+  color: white;
+}
