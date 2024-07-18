@@ -1,0 +1,409 @@
+/* Keyframes for fading in elements */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.3vw)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-1.3vw)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate(0)
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.3vw)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-1.3vw)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+/* Keyframes for moving elements up */
+@keyframes moveUp {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-2.7vh)
+    }
+}
+
+@-webkit-keyframes moveUp {
+    0% {
+        -webkit-transform: translateY(0)
+    }
+
+    to {
+        -webkit-transform: translateY(-2.7vh)
+    }
+}
+
+@-moz-keyframes moveUp {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-2.7vh)
+    }
+}
+
+@-ms-keyframes moveUp {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-2.7vh)
+    }
+}
+
+/* Global CSS reset */
+* {
+    box-sizing: border-box
+}
+
+/* Base styles for body and html */
+body,html {
+    display: table;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%
+}
+
+/* Specific styling for body */
+body {
+    background: lightblue url(../images/profile_background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: -45vh;
+}
+
+#logo {
+    margin-left: 13.02vw;
+}
+
+
+/* Styling for different elements */
+
+#heading {
+    color: darkblue;
+}
+
+#content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 135vh
+}
+
+.Button {
+    width: auto;
+    min-width: 50px;
+    padding: 0 10px;
+    height: 4.05vh;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 15px;
+    line-height: 4.05vh;
+    background-color: #add8e6;
+    display: inline-block;
+    margin-top: 1.355vh;
+    margin-bottom: 1.9575vh;
+    cursor: pointer;
+    user-select: none
+}
+
+#nextButton {
+    animation: none
+}
+
+#steps,.Button {
+    border: 1px solid gray
+}
+
+#steps {
+    width: 23.436vw;
+    background-color: #87ceeb;
+    display: none;
+    border-radius: 12px;
+    line-height: 2
+}
+
+
+#promptText {
+    margin-left: auto;
+    margin-right: auto
+}
+
+#prompt {
+    min-width: 16.2775vw;
+    height: 10.1625vh;
+    background-color: #add8e6;
+    border: 1px solid gray;
+    border-radius: 14px;
+    margin: 0 auto;
+    margin-top: 3.915vh;
+    text-align: left
+}
+
+#promptText {
+    padding: 5px;
+    float: left;
+    margin-top: 6.8275vh
+}
+
+#promptBox {
+    width: 75%;
+    height: 4.05vh;
+    background-color: #d3d3d3;
+    border: 1px solid gray;
+    border-radius: 5px;
+    overflow: auto;
+    -ms-overflow-style: none; /* Disable scrollbar but still have functionality for scrolling */
+    scrollbar-width: none
+}
+
+#promtBox::-webkit-scrollbar {
+    display: none
+}
+
+#progressBar {
+    display: none;
+    width: 17.026vw
+}
+
+.fade-in {
+    animation: fadeIn .5s ease-in-out forwards
+}
+
+.move-up {
+    animation: moveUp .5s ease-in-out forwards
+}
+
+.animate-border {
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 2px red
+}
+
+/* Disable animations for people who prefer reduced motions (Accessability) */
+@media (prefers-reduced-motion:reduce) {
+    .fade-in,.move-up {
+        animation: none
+    }
+
+    .animate-border {
+        border: 0
+    }
+}
+
+#progressText {
+    display: none;
+    margin-top: 2.73vh
+}
+
+#output {
+    margin: 0 auto;
+    height: auto;
+    width: 17.026vw;
+    border: 1px solid #789;
+    background-color: #789;
+    border-radius: 8px
+}
+
+#output,#outputText {
+    display: none
+}
+
+.step-separator {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #adff2f
+}
+
+/* Styling for the guide at the left side */
+#guide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 15vw;
+    background-color: lightskyblue;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    text-align: left;
+}
+
+#guide h2,h3 {
+    font-size: 16px;
+    margin-top: 2.173vh
+}
+
+#guide ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0
+}
+
+#guide li {
+    margin-bottom: 1.3575vh
+}
+
+kbd {
+    display: inline-block;
+    min-width: 25px;
+    padding: 3px 5px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #24292e;
+    vertical-align: middle;
+    background-color: #f6f8fa;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    box-shadow: inset 0-1px 0 rgba(27,31,35,.1);
+    text-align: center
+}
+
+#freePik {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    opacity: 0.3;
+}
+
+#prompt,#steps {
+    height: auto
+}
+
+ol {
+    list-style-type: decimal
+}
+
+/* Syling for smaller screens */
+@media (max-width:600px) {
+    #content-wrapper {
+        flex-direction: column
+    }
+
+    #output,.Button {
+        width: auto
+    }
+
+    #guide {
+        margin: 0 auto
+    }
+
+    body {
+        background-size: auto;
+        background-color: #d3d3d3
+    }
+
+    .Button {
+        min-width: 50px;
+        height: auto;
+        font-size: 12px;
+        margin: 5px auto
+    }
+
+    #prompt,#steps {
+        margin: 0 auto;
+    }
+
+    #steps {
+        width: 90vw
+    }
+
+    #prompt {
+        width: 80vw;
+        padding: 15px;
+        overflow: hidden
+    }
+
+    #promptBox {
+        height: 3.5vh
+    }
+
+    #guide {
+        position: static;
+        width: 100%;
+        max-width: none;
+        padding: 10px;
+        margin-top: 20px;
+        overflow-y: visible;
+        border-right: none;
+    }
+
+    #guide h2 {
+        font-size: 14px;
+        margin-top: 10px
+    }
+
+    #guide ul {
+        padding-left: 10px
+    }
+
+    #guide li {
+        margin-bottom: 10px
+    }
+
+    kbd {
+        font-size: 10px;
+    }
+
+    .fade-in,.move-up {
+        animation: none
+    }
+
+    #promptBox {
+        width: auto;
+        height: auto;
+        margin: 10px auto
+    }
+
+    #promptText {
+        padding: 10px;
+        margin: 5px
+    }
+}

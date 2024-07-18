@@ -1,0 +1,93 @@
+/* Global Styling */
+* {
+    box-sizing: border-box
+}
+
+/* Base styles for body and html */
+body,html {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%
+}
+
+/* Specific styling for body */
+body {
+    background: grey url("../images/teambackground.jpg");
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    text-align: center
+}
+
+footer {
+    position: absolute;
+    bottom: -50vh;
+}
+
+/* Styling for different elements */
+
+#team-image-container {
+    white-space: nowrap;
+    margin-top: 9.485vh
+}
+
+#team-image-container figure {
+    display: inline-block;
+    text-align: center;
+    margin: 0 5px;
+    vertical-align: top;
+    width: auto
+}
+
+#team-image-container img {
+    height: auto;
+    width: 20.83vw;
+    max-height: auto;
+    min-width: auto;
+    opacity: .7;
+    transition: opacity .3s ease-in-out;
+    padding: 5px;
+}
+
+#team-image-container figure:hover img {
+    opacity: 1
+}
+
+/* Styling for the boxes below images */
+figcaption {
+    height: auto;
+    width: 20.83vw;
+    display: none;
+    min-width: auto;
+    max-width: auto;
+    overflow: auto
+}
+
+/* Display the box on hover */
+#team-image-container figure:hover figcaption {
+    display: block;
+    background-color: #d3d3d3
+}
+
+
+.name {
+    font-weight: 700
+}
+
+.tasks {
+    padding: 10px;
+    text-align: left
+}
+
+header {
+    color: darkblue;
+    padding: 20px;
+}
+
+#vecteezy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    opacity: 0.3;
+}

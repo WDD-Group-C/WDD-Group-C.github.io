@@ -30,8 +30,11 @@
 !images/*.png
 !images/*.svg
 !images/*.gif
+!images/*.webp
 !scripts/
 !scripts/*.js
 !videos/
 !videos/*.mp3
 !videos/*.mp4
+!otherstylesheets/
+!otherstylesheets/*.css
