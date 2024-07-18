@@ -1,0 +1,52 @@
+#about p{
+    color: rgb(8, 103, 106);
+    text-align: center;
+    padding: 8px;
+    font-size: 1.5em;
+}
+header{
+    background-image: url('images/pageedit5.png'); /*the background image is used to decorate the page */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+body{
+    background-image: url('images/pageedit5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+
+    text-shadow: 0.4px 0.4px rgb(28, 144, 183);
+    color:rgb(128, 14, 236);
+    text-align: center;
+    padding: 20px;
+}
+.topandbottom{
+    display: flex;
+    justify-content: center;
+}
+body a:hover{
+    color:rgb(61, 149, 178);
+}
+body a:active{
+    color:darkslategrey;
+}
+body a:visited{
+    color:rgb(61, 149, 178);
+}
+table th, td{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px 10px 10px 10px;/*setting spaces between the element and its border for the table. The order of sides are Top, Right, Bottom and Left (follows the TRoubLE mnemonic)*/
+}
+
+table{
+    border-collapse: collapse;
+    width: 85%;
+    margin: 0 auto; /*0 represents the y axis ad auto represents the x axis. 
+    since the x axis i et to auto, the table will be placed in the centre horzontally*/
+}
+#check{
+    color:green;/*setting the check marks to green color*/
+}
