@@ -1,30 +1,76 @@
-
-<!-- Add a title and delete all the comments below including the comment in the script tag-->
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    	<script>
-        // Javascript goes here
-      </script>
-  </head>
-  <body>
-    <header>
-        <!-- Header content goes here -->
-    </header>
-    
-    <main>
-        <!-- Main content goes here. Should not contain any repeated content -->
-    </main>
-    
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
-  </body>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"><!--view the window in its original size-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Page Editor</title><!--Title to be appeared in the top of the browser window-->
+        <link rel = "stylesheet" href = "style.css">
+        <link rel="stylesheet" href="pageeditor.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <header><!--details about myself-->
+            <div id = "about">
+                <hr>
+                <p>Name: Sarah Aleesha Samuel</p>
+                <p>Role: Student 4</p>
+                <p>This page was edited by me</p>
+                <hr>
+            </div>
+        </header>
+        <main><!--main content that contains a table, containing my tasks, decrptions, and links to those specific tasks-->
+            <h1 id = "top">About Me</h1>
+            <table><!--the task completed are mentioned using the table tag to enhane readability-->
+                <tr><!--headings of the table. The 'th' tag automatically aligns the text to the centre of the cell and bolds the text-->
+                    <th>Index</th>
+                    <th>Task</th>
+                    <th>Description</th>
+                    <th>Links to the pages</th>
+                    <th id = "des">Completed</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Gallery</td>
+                    <td>The gallery was created using images from Pinterest, designed using CSS properties, and implemented user interaction using JavaScript</td>
+                    <td><a href = "gallery.html" target = "_blank">link to Gallery</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>Site Map</td>
+                    <td>I created the site map of our website using JavaScript, CSS and HTML5. the sitemap was designed to guide the user throughout the website by providing links to each page </td>
+                    <td><a href = "site.html" target = "_blank">link to Site Map</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>Page Editor</td>
+                    <td>I created the page editor using my knowledge of the table attributes in HTML. The aesthetic of this page is rather different compared to the main topic of the website</td>
+                    <td><a href = "pageEditorS4.html" target = "_blank">link to Page Editor</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Content Page</td>
+                    <td>The content page contains additional content based on the theme, "Life under water. It was created by conducting research about the sub-topic assigned to me and some aditional attrubuted that I learnt from the W3Schools Website</td>
+                    <td><a href = "content.html" target = "_blank">link to Content Page</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Additional Javascript</td>
+                    <td>Additional Javascript was implemented on the gallery page to enhance user experience and the view of the page </td>
+                    <td><a href = "gallery.js" target = "_blank">link to Javascript page of gallery</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+
+            </table>
+            <br>
+            <br>
+            <div class="topandbottom" ><!--section that contains the link that guides the user to the top of this page-->
+                <a href = "#about" id="bottom">Take me up &uarr;</a>
+            </div>
+        </main>
+    </body>
 </html>

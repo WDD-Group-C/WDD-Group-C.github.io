@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout page | Life Below Water</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="home.html"><img src="assets/WhatsApp Image 2024-07-15 at 16.43.48_7f2ec30d.jpg" alt="Logo"></a>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="">SHOP</a></li>
+                    <li><a href="">GALLARY</a></li>
+                    <li><a href="feedback.html">FEEDBACK</a></li>
+                    <li><a href="">SITE MAP</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <div class="main-container">
+
+        <div class="cart-menu"> <!-- div to display the items in cart with price details-->
+            <div class="cart-heading" >
+                <h2>Cart</h2>
+                <div class="cart-icon">
+                    <span class="material-symbols-outlined">
+                        shopping_cart
+                    </span>
+                    <span class="cart-badge" id="cart-badge">1</span>
+                </div>
+            </div>
+            <div class="cart-list">
+                <ul class="cart-item-list" id="cart-item-list">
+                    <!-- a blank list to display the items in cart-->
+                </ul>
+            </div>
+            
+            <div class="cart-total" id="cart-total">
+                <h2>Total</h2>
+                <div>
+                    <span class="total-amount" id="cart-amount">Rs. 100.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- div to display the checkout form-->
+        <div class="column checkout-form">
+            <div class="row">
+                <form name="check-out-form-html" id="checkout-form-submission" action="mailto:lorem@gmail.com" method="post" onsubmit="return redirectToSuccessPage()">
+                    <div class="form-flex">
+
+                        <div class="column shipping-form">
+                            <div class="shipping-details">
+                                <span class="material-symbols-outlined">
+                                    local_shipping
+                                </span>
+                                <span>
+                                    <span id="h2">Shipping Details</span>
+                                </span>
+                            </div>
+                            <!-- fullname*, phone number, email address, Address line 1*, line 2, line 3, Town/City*, State/Region, Postal Code*, Country* -->
+                            <div class="form-container">
+                                <div class="form-input">
+                                    <label class="form-label" for="full-name">Full Name <span class="required">*</span></label>
+                                    <input type="text" id="full-name" name="full-name" placeholder="Lakesh" required>
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-label" for="phonenumber">Phone Number</label>
+                                    <input type="tel" id="phonenumber" name="phonenumber" placeholder="074-125-8564" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-label" for="email">Email Address</label>
+                                    <input type="text" id="email" name="email" placeholder="lorem@ipsm.com">
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-label" for="addressLine1">Address Line 1 <span class="required">*</span></label>
+                                    <input type="text" id="addressLine1" name="addressLine1" placeholder="542 W. 15th Street" required>
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-label" for="addressLine2">Address Line 2</label>
+                                    <input type="text" id="addressLine2" name="addressLine2">
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-label" for="addressLine3">Address Line 3</label>
+                                    <input type="text" id="addressLine3" name="addressLine3">
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-label" for="city">Town/City <span class="required">*</span></label>
+                                    <input type="text" id="city" name="city" placeholder="California" required>
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-label" for="state">State/Region <span class="required">*</span></label>
+                                    <input type="text" id="state" name="state" placeholder="California" required>
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-label" for="zip">Postcode/Zip Code <span class="required">*</span></label>
+                                    <input type="text" id="zip" name="zip" placeholder="10000" required>
+                                </div>
+                            
+                                <div class="form-input">
+                                    <label class="form-label" for="country">Country <span class="required">*</span></label>
+                                    <!-- https://stackoverflow.com/questions/53388003/select-country-dropdown-in-html-page -->
+                                    <select name="country" class="form-control" id="country">
+                                        <optgroup id="country-optgroup-Africa" label="Africa">
+                                            <option value="DZ" label="Algeria">Algeria</option>
+                                            <option value="AO" label="Angola">Angola</option>
+                                            <option value="BJ" label="Benin">Benin</option>
+                                            <option value="BW" label="Botswana">Botswana</option>
+                                            <option value="BF" label="Burkina Faso">Burkina Faso</option>
+                                            <option value="BI" label="Burundi">Burundi</option>
+                                            <option value="CM" label="Cameroon">Cameroon</option>
+                                            <option value="CV" label="Cape Verde">Cape Verde</option>
+                                            <option value="CF" label="Central African Republic">Central African Republic</option>
+
+                                        </optgroup>
+                                        <optgroup id="country-optgroup-Americas" label="Americas">
+                                            <option value="AI" label="Anguilla">Anguilla</option>
+                                            <option value="AG" label="Antigua and Barbuda">Antigua and Barbuda</option>
+                                            <option value="AR" label="Argentina">Argentina</option>
+                                            <option value="AW" label="Aruba">Aruba</option>
+                                            <option value="BS" label="Bahamas">Bahamas</option>
+                                            <option value="BB" label="Barbados">Barbados</option>
+                                            <option value="BZ" label="Belize">Belize</option>
+                                            <option value="BM" label="Bermuda">Bermuda</option>
+                                            <option value="BO" label="Bolivia">Bolivia</option>
+                                            <option value="BR" label="Brazil">Brazil</option>
+                                            <option value="VG" label="British Virgin Islands">British Virgin Islands</option>
+                                            <option value="CA" label="Canada">Canada</option>
+
+    
+                                        </optgroup>
+                                        <optgroup id="country-optgroup-Asia" label="Asia">
+                                            <option value="AF" label="Afghanistan">Afghanistan</option>
+                                            <option value="AM" label="Armenia">Armenia</option>
+                                            <option value="AZ" label="Azerbaijan">Azerbaijan</option>
+                                            <option value="BH" label="Bahrain">Bahrain</option>
+                                            <option value="BD" label="Bangladesh">Bangladesh</option>
+                                            <option value="BT" label="Bhutan">Bhutan</option>
+                                            <option value="BN" label="Brunei">Brunei</option>
+                                            <option value="KH" label="Cambodia">Cambodia</option>
+                                            <option value="CN" label="China">China</option>
+                                            <option value="GE" label="Georgia">Georgia</option>
+                                            <option value="HK" label="Hong Kong SAR China">Hong Kong SAR China</option>
+                                            <option value="IN" label="India">India</option>
+                                            <option value="ID" label="Indonesia">Indonesia</option>
+
+                                        </optgroup>
+                                        <optgroup id="country-optgroup-Europe" label="Europe">
+                                            <option value="AL" label="Albania">Albania</option>
+                                            <option value="AD" label="Andorra">Andorra</option>
+                                            <option value="AT" label="Austria">Austria</option>
+                                            <option value="BY" label="Belarus">Belarus</option>
+                                            <option value="BE" label="Belgium">Belgium</option>
+                                            <option value="BG" label="Bulgaria">Bulgaria</option>
+                                            <option value="HR" label="Croatia">Croatia</option>
+
+                                        </optgroup>
+                                        <optgroup id="country-optgroup-Oceania" label="Oceania">
+                                            <option value="AS" label="American Samoa">American Samoa</option>
+                                            <option value="AQ" label="Antarctica">Antarctica</option>
+                                            <option value="AU" label="Australia">Australia</option>
+                                            <option value="BV" label="Bouvet Island">Bouvet Island</option>
+                                            <option value="IO" label="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                            <option value="CX" label="Christmas Island">Christmas Island</option>
+                                            <option value="CC" label="Cocos [Keeling] Islands">Cocos [Keeling] Islands</option>
+                                            <option value="CK" label="Cook Islands">Cook Islands</option>
+                                            <option value="FJ" label="Fiji">Fiji</option>
+                                            <option value="PF" label="French Polynesia">French Polynesia</option>
+                                            <option value="TF" label="French Southern Territories">French Southern Territories</option>
+                                            <option value="GU" label="Guam">Guam</option>
+                 
+                                        </optgroup>
+                                        <option label="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="payment-form">
+                            <div class="shipping-details">
+                                <span class="material-symbols-outlined">
+                                    local_shipping
+                                </span>
+                                
+                                <span>
+                                    <span id="h2-2">Payment Details</span>
+                                </span>
+                            </div>
+                    
+                            <div class="form-container">
+                                <div class="form-input">
+                                    <label>Accepted Cards</label>
+                                    <div class="icon-container">
+                                      <i class="fa fa-cc-visa"></i>
+                                      <i class="fa fa-cc-amex"></i>
+                                      <i class="fa fa-cc-mastercard"></i>
+                                      <i class="fa fa-cc-discover"></i>
+                                    </div>
+                                </div>
+                
+                                <div class="form-input">
+                                    <label class="form-label" for="nameoncard">Name on Card <span class="required">*</span></label>
+                                    <input type="text" id="nameoncard" name="nameoncard" placeholder="Lakesh" required>
+                                </div>
+                                <div class="form-input">
+                                    <label class="form-label" for="cardno">Credit Card Number <span class="required">*</span></label>
+                                    <input type="text" id="cardno" name="cardno" placeholder="1111-2222-3333-4444" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+                                </div>
+                                <div class="form-input cardexpp">
+                                    <label class="form-label" for="expmonth">Exp Month <span class="required">*</span></label>
+                                    <input type="text" id="expmonth" name="expmonth" placeholder="09" pattern="[0-99]{2}" required>
+                                </div>
+                                <div class="form-input cardexpp">
+                                    <label class="form-label" for="expyear">Exp Year <span class="required">*</span></label>
+                                    <input type="text" id="expyear" name="expyear" placeholder="26" pattern="[0-99]{2}" required>
+                                </div>
+                                
+                                <div class="form-input cardcvv">
+                                    <label class="form-label" for="cvv">CVV <span class="required">*</span></label>
+                                    <input type="text" id="cvv" name="cvv" placeholder="352" pattern="[0-999]{3}" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-buttons form-input">
+                        <button type="button" class="btn-cancel" onclick="window.location.href = 'buy-products.html';">Cancel</button>
+                        <button id="submit-bt" type="submit" class="btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>        
+        </div>
+    </div>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p style="color: white;">Welcome to Life Below Water, a passionate community dedicated to preserving our marine ecosystems. Our journey began with a simple idea to protect and conserve the beauty and biodiversity of our oceans.Join us as we work together to ensure a sustainable and thriving ocean for future generations.</p>
+        <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+        </div>
+        <p style="color: white;">copyright ©2024. Designed by Ocean Action Hub</p>
+    </section>
+
+
+    <script src="checkout.js"></script>
+</body>
+</html>

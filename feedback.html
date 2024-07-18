@@ -1,30 +1,91 @@
-
-<!-- Add a title and delete all the comments below including the comment in the script tag-->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>Feedback</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    	<script>
-        // Javascript goes here
-      </script>
-  </head>
-  <body>
-    <header>
-        <!-- Header content goes here -->
-    </header>
-    
-    <main>
-        <!-- Main content goes here. Should not contain any repeated content -->
-    </main>
-    
-    <footer>
-      <!-- Footer content goes here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="feedback.html">FEEDBACK</a></li>
+                    <li><a href="#">SITE MAP</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section class="main" style="display: flex; padding: 0; min-height: 100vh; align-items: center; justify-content: center;">
+        <div class="wrapper" id="formContainer">
+            <header>Leave us a feedback</header>
+            <form id="form" action="#">
+                <div class="dbl-field">
+                    <div class="field input-group">
+                        <input type="text" id="name" name="name" placeholder="Enter your name">
+                        <i class="fa fa-user"></i>
+                        <small class="error"></small>
+                    </div>
+                    <div class="field input-group">
+                        <input type="text" id="email" name="email" placeholder="Enter your email">
+                        <i class="fa fa-envelope"></i>
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="dbl-field">
+                    <div class="field input-group">
+                        <input type="text" id="phone" name="phone" placeholder="Enter your phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <small class="error"></small>
+                    </div>
+                    <div class="field input-group">
+                        <input type="text" id="website" name="website" placeholder="Enter your website">
+                        <i class="fa fa-globe"></i>
+                        <small class="error"></small>
+                    </div>
+                </div>
+                <div class="message input-group">
+                    <textarea id="message" name="message" placeholder="Write your message"></textarea>
+                    <i class="fa-solid fa-pen"></i>
+                    <small class="error"></small>
+                </div>
+                <div class="button-area">
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Clear</button>
+                    <span>Sending your message.....</span>
+                </div>
+                
+                
+            </form>
+        </div>
+    </section>
+    <div id="thankYouModal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for your feedback!</p>
+            <button id="goToMainMenu">Go to Main Menu</button>
+        </div>
+    </div>
+    <script src="feedback.js"></script>
+    <footer style="margin-top: -6%;">
+        <h4>About Us</h4>
+        <p style="color: white;">Welcome to Life Below Water, a passionate community dedicated to preserving our marine ecosystems. Our journey began with a simple idea to protect and conserve the beauty and biodiversity of our oceans. Join us as we work together to ensure a sustainable and thriving ocean for future generations.</p>
+        <div class="social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
+        </div>
+        <p style="color: white;">copyright ©2024. Designed by Kirushanth</p>
     </footer>
-  </body>
+    </body>
 </html>
