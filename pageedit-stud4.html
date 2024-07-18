@@ -6,59 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Page Editor</title><!--Title to be appeared in the top of the browser window-->
         <link rel = "stylesheet" href = "style.css">
+        <link rel="stylesheet" href="pageeditor.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <style>
-            #about p{
-                color: rgb(8, 103, 106);
-                text-align: center;
-            }
-            header{
-                background-image: url('images/pageedit.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-radius: 10px;
-            }
-            body{
-                background-image: url('images/pageedit2.png');
-                background-repeat: no-repeat;
-                background-size: cover;
-            }
-            #top{
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                text-shadow: 0.5px 0.5px black;
-                color:rgb(60, 38, 81)
-            }
-            .topandbottom{
-                display: flex;
-                justify-content: center;
-            }
-            body a:hover{
-                color:rgb(61, 149, 178);
-            }
-            body a:active{
-                color:darkslategrey;
-            }
-            table th, td{
-                border: 1px solid black;
-                border-collapse: collapse;
-                text-align: center;
-                padding-inline: 5px;/*setting spaces between the element and its margin for the table */
-            }
-
-            table{
-                width: 80%;
-                margin: 0 auto; /*0 represents the y axis ad auto represents the x axis. 
-                since the x axis i et to auto, the table will be placed in the centre horzontally*/
-            }
-            #check{
-                color:green;/*setting the check marks to green color*/
-            }
-            footer{
-                background-image: url('images/pageedit4.png');
-                background-repeat: repeat;
-                background-size: cover;
-            }
-        </style>
     </head>
     <body>
         <header><!--details about myself-->
@@ -66,16 +15,13 @@
                 <hr>
                 <p>Name: Sarah Aleesha Samuel</p>
                 <p>Role: Student 4</p>
-                <p>This page was edited by none other than ME!</p>
+                <p>This page was edited by me</p>
                 <hr>
             </div>
         </header>
         <main><!--main content that contains a table, containing my tasks, decrptions, and links to those specific tasks-->
-            <div class="topandbottom">
-                <a href = "#bottom">&darr; to the bottom we go</a>
-            </div>
             <h1 id = "top">About Me</h1>
-            <table>
+            <table><!--the task completed are mentioned using the table tag to enhane readability-->
                 <tr><!--headings of the table. The 'th' tag automatically aligns the text to the centre of the cell and bolds the text-->
                     <th>Index</th>
                     <th>Task</th>
@@ -86,14 +32,14 @@
                 <tr>
                     <td>1.</td>
                     <td>Gallery</td>
-                    <td>I created the gallery using images from Pinterest and designed the page using CSS and implemented user interaction using JavaScript</td>
-                    <td><a href = "gall.html" target = "_blank">link to Gallery</a></td>
+                    <td>The gallery was created using images from Pinterest, designed using CSS properties, and implemented user interaction using JavaScript</td>
+                    <td><a href = "gallery.html" target = "_blank">link to Gallery</a></td>
                     <td id = "check">&checkmark;</td>
                 </tr>
                 <tr>
                     <td>2.</td>
                     <td>Site Map</td>
-                    <td>I created the site map of our website using JavaScript, CSS and HTML5. the sitemap was designed to interact with the user and guide the user throughout the website by providing links to each page </td>
+                    <td>I created the site map of our website using JavaScript, CSS and HTML5. the sitemap was designed to guide the user throughout the website by providing links to each page </td>
                     <td><a href = "site.html" target = "_blank">link to Site Map</a></td>
                     <td id = "check">&checkmark;</td>
                 </tr>
@@ -101,17 +47,30 @@
                     <td>3.</td>
                     <td>Page Editor</td>
                     <td>I created the page editor using my knowledge of the table attributes in HTML. The aesthetic of this page is rather different compared to the main topic of the website</td>
-                    <td><a href = "site.html" target = "_blank">link to Site Map</a></td>
+                    <td><a href = "pageEditorS4.html" target = "_blank">link to Page Editor</a></td>
                     <td id = "check">&checkmark;</td>
                 </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>Content Page</td>
+                    <td>The content page contains additional content based on the theme, "Life under water. It was created by conducting research about the sub-topic assigned to me and some aditional attrubuted that I learnt from the W3Schools Website</td>
+                    <td><a href = "content.html" target = "_blank">link to Content Page</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+                <tr>
+                    <td>5.</td>
+                    <td>Additional Javascript</td>
+                    <td>Additional Javascript was implemented on the gallery page to enhance user experience and the view of the page </td>
+                    <td><a href = "gallery.js" target = "_blank">link to Javascript page of gallery</a></td>
+                    <td id = "check">&checkmark;</td>
+                </tr>
+
             </table>
             <br>
-        </main>
-        <footer>
             <br>
-            <div class="topandbottom" id = "bottom"><!--section that contains the link that guides the user to the top of this page-->
-                <a href = "#top">Take me up &uarr;</a>
+            <div class="topandbottom" ><!--section that contains the link that guides the user to the top of this page-->
+                <a href = "#about" id="bottom">Take me up &uarr;</a>
             </div>
-        </footer>
+        </main>
     </body>
 </html>
