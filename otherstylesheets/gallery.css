@@ -1,0 +1,131 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color:rgb(36, 200, 254);
+}
+
+h1{
+    border: 1.5px solid black;
+    text-align: center;
+}
+
+
+#targets{
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    justify-content: center;
+    width: 100%;
+    max-width: 1550px;
+    height:1000px;
+    margin:auto;
+    padding: 5px;
+    transition: transform 0.2s ease-in;
+    box-sizing: border-box; /*includes the element's padding and border in the total width and height.*/ 
+}
+
+#targets img{
+    width: 400px;
+    height: 300px;
+    padding: 5px;
+}
+
+
+#targets .thumbNail{
+    text-align: center;
+    padding: 20px;
+    width: fit-content;
+    color: black;
+}
+ 
+
+#target1:hover {
+    transform:scale(1.03);
+} 
+
+#target2:hover {
+    transform:scale(1.03);
+} 
+
+#target3:hover {
+    transform:scale(1.03);
+} 
+
+#target4:hover {
+    transform:scale(1.03);
+} 
+
+#target5:hover {
+    transform:scale(1.03);
+} 
+
+#target6:hover {
+    transform:scale(1.03);
+}
+
+section .popups{
+    display:none;
+    position: fixed;
+    box-shadow: 0 6px 6px lightcyan;
+    top: 50%;
+    left: 50%;/*to align the popup element in the middle of the screen*/ 
+    transform: translate(-50%, -50%);
+    box-shadow: 0 6px 3px rgb(27, 245, 245);
+    width: 70%;
+    max-width: 1400px;
+    height: auto;
+    border-radius: 5px;  
+    background-color:aliceblue;
+    padding: 5%;
+    z-index: 1000;
+}
+
+section .popups img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+section .popups #heading{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+section .popups .flex{
+    display: flex;
+}
+
+section .flex{
+    justify-content: center;
+}
+
+section .popups #description1, section .popups #description2, section .popups #description3, section .popups #description4, section .popups #description5, section .popups #description6 {
+    text-align:left;
+    width: 900px;
+    margin: auto;
+    padding: 1px;
+}
+section .popups #description ul, li{
+    list-style-type : disc;
+}
+section .popups .flex .exitButton button{
+    margin-left: auto;
+    border:none;
+    border-radius: 10%;
+    color: red;
+    font-weight: bold;
+    width: 40px;
+    height:40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+section .popups .flex .exitButton button:hover {
+    background-color: brown;
+}
+section .popups #changeProperties{
+    display: inline-flex;
+}
+section .popups #changeProperties, #colorchange, #fontchange{
+    padding: 7px;
+}
+
