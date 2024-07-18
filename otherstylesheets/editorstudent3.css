@@ -1,0 +1,46 @@
+/* Global Styling */
+* {
+    box-sizing: border-box
+}
+
+/* Base styles for body and html */
+body,html {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%
+}
+
+/* Specific styling for body */
+body {
+    background-color: lightskyblue;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+h1 {
+    color: darkblue;
+}
+
+#intro {
+    background-color: white;
+    padding: 10px;
+}
+
+hr {
+    border-color: violet;
+}
+
+div {
+    padding-top: 1.355vh;
+    padding-bottom: 0.9485vh;
+}
+
+.textcontent {
+    width: auto;
+    height: auto;
+}
+
+
