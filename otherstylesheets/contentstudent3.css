@@ -1,0 +1,167 @@
+/* Global Styling */
+* {
+    box-sizing: border-box
+}
+
+/* Base styles for body and html */
+body,html {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Specific styling for body */
+body {
+    background-color: lightblue;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+h1,h2,h3 {
+    color: darkblue;
+}
+
+header {
+    padding-top: 0.1355vh;
+    height: 81.3vh;
+    background-color: lightskyblue;
+}
+
+
+footer {
+    position: absolute;
+    bottom: -160vh;
+}
+
+#subheading {
+    padding: 1px;
+    text-decoration: underline;
+    text-decoration-color: darkblue;
+}
+
+#introText {
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 6.775vh;
+}
+
+#internal-links-container {
+    height: auto;
+    margin-top: 8.13vh;
+}
+
+.internalLink {
+    position: static;
+    text-align: center;
+    display: inline-block;
+    background-color: blueviolet;
+    padding: 15px;
+    margin-bottom: 2.71vh;
+    margin: 0 auto;
+    top: auto;
+    bottom: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+#section1, #section3 {
+    background-color: white;
+}
+
+#section2, #section4 {
+    background-color: lightskyblue;
+}
+
+img {
+    width: 19.531vw;
+    padding: 10px;
+    height: auto;
+    max-width: 100%;
+}
+
+#fig1, #fig3 {
+    margin-right: 78.125vw;
+    display: flex;
+    align-items: center;
+}
+
+#fig2, #fig4 {
+    margin-left: 78.125vw;
+    display: flex;
+    align-items: center;
+}
+
+div,p {
+    padding: 5px;
+    height: auto;
+    width: auto;
+}
+
+footer {
+    padding: 15px;
+}
+
+#figcaption1, #figcaption3 {
+    position: absolute;
+    right: 0;
+    margin-left: auto;
+    text-align: right;
+    max-width: 70%;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+
+#figcaption2, #figcaption4 {
+    position: absolute;
+    left: 0;
+    margin-left: auto;
+    text-align: left;
+    max-width: 70%;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
+
+
+#return {
+    color: black;
+}
+
+
+@media (max-width: 600px) {
+    #internal-links-container,.internalLink {
+        position: relative;
+        width: auto;
+        padding: 5px;
+        margin: 0 auto;
+    }
+
+    .internalLink {
+        top: auto;
+        font-size: 2vw;
+    }
+
+
+    #introText {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        word-wrap: break-word;
+        word-break: break-word;   
+        font-size: 2vw;
+        bottom: 30px;
+    }
+
+    figcaption {
+        font-size: 2vw;
+    }
+}

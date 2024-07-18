@@ -30,6 +30,7 @@
 !images/*.png
 !images/*.svg
 !images/*.gif
+!images/*.webp
 !scripts/
 !scripts/*.js
 !videos/

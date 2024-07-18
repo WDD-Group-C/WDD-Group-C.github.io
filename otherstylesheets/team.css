@@ -7,7 +7,6 @@
 body,html {
     margin: 0;
     padding: 0;
-    font-family: Verdana,Geneva,Tahoma,sans-serif;
     -webkit-text-size-adjust: 100%
 }
 
@@ -18,6 +17,11 @@ body {
     height: auto;
     vertical-align: middle;
     text-align: center
+}
+
+footer {
+    position: absolute;
+    bottom: -50vh;
 }
 
 /* Styling for different elements */
@@ -36,10 +40,13 @@ body {
 }
 
 #team-image-container img {
+    height: auto;
+    width: 20.83vw;
+    max-height: auto;
     min-width: auto;
-    max-width: 20.83vw;
     opacity: .7;
-    transition: opacity .3s ease-in-out
+    transition: opacity .3s ease-in-out;
+    padding: 5px;
 }
 
 #team-image-container figure:hover img {
@@ -48,9 +55,11 @@ body {
 
 /* Styling for the boxes below images */
 figcaption {
-    display: none;
     height: auto;
     width: 20.83vw;
+    display: none;
+    min-width: auto;
+    max-width: auto;
     overflow: auto
 }
 
@@ -59,6 +68,7 @@ figcaption {
     display: block;
     background-color: #d3d3d3
 }
+
 
 .name {
     font-weight: 700

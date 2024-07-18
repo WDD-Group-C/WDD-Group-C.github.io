@@ -98,13 +98,12 @@ body,html {
     display: table;
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     -webkit-text-size-adjust: 100%
 }
 
 /* Specific styling for body */
 body {
-    background: #a9a9a9 url(../images/profile_background.jpg);
+    background: lightblue url(../images/profile_background.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -115,6 +114,16 @@ body {
     text-align: center;
 }
 
+footer {
+    position: absolute;
+    bottom: -45vh;
+}
+
+#logo {
+    margin-left: 13.02vw;
+}
+
+
 /* Styling for different elements */
 
 #heading {
@@ -124,7 +133,7 @@ body {
 #content-wrapper {
     display: flex;
     flex-direction: column;
-    min-height: 120vh
+    min-height: 135vh
 }
 
 .Button {
@@ -266,7 +275,7 @@ body {
     text-align: left;
 }
 
-#guide h2 {
+#guide h2,h3 {
     font-size: 16px;
     margin-top: 2.173vh
 }
