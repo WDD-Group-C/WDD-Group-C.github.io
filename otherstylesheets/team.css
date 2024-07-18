@@ -12,7 +12,7 @@ body,html {
 
 /* Specific styling for body */
 body {
-    background: grey url("../images/teambackground.jpg");
+    background: grey url("../images/teambackground.webp");
     width: auto;
     height: auto;
     vertical-align: middle;
