@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #0011ff07;
+}
+
+.cnt_header_img{
+    height:500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301),rgba(0, 0, 0, 0.7)), url('images/img3.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top: 110px;
+}
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left:0%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+nav{
+    display: flex;
+    padding: 1.5% 3%;
+    padding-left: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 190px;
+}
+
+.nav-link{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-link ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.nav-link ul li a.active{
+  color: #4753ff; 
+  font-weight: 700;
+}
+
+.nav-link ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link ul li:hover::after{
+    width: 100%;
+
+}
+
+.text3{
+    width: 90%;
+    color: black;
+    position: absolute;
+    top:15%;
+    left: 1.5%;
+    text-align: left;
+  }
+  
+  .text3 h2{
+    font-size: 45px;
+    margin-left: 3%;
+  }
+  
+  .text3 hr{
+    margin-left: 6%;
+  }
+  
+  .text3 h3{
+    font-size: 32px;
+    text-align: left;
+    margin-left: 6%;
+  }
+  
+  .text3 p{
+    font-size: 23px;
+    text-align: left;
+    margin-left: 10%
+  }
+  
+  .text3 ul li{
+    font-size: 23px;
+    text-align: left;
+    margin-left: 15%;
+  }
+
+  h3{
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+}
+
+footer p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+footer h4{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-weight: 600;
+    color: white;
+}
+
+footer .fa-brands{
+    margin: 0 8px;
+    cursor: pointer;
+    padding: 18px 0;
+    color: white;
+}
+
+footer .fa-regular{
+  margin: 0 8px;
+  cursor: pointer;
+  padding: 18px 0;
+  color: white;
+}
