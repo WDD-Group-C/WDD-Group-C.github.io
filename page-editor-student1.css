@@ -1,0 +1,52 @@
+body {
+    background-image: url(assets/R\ \(1\).jpeg);
+    background-attachment: fixed;
+    justify-content: center;
+    text-align: center;
+    font-family: monospace;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1 {
+    font-size: 5rem;
+    letter-spacing: 5px;
+}
+
+p {
+    font-size: 25px;
+}
+
+.name {
+    font-size: 3rem;
+}
+
+.role {
+    font-size: 2rem;
+}
+
+.name, .role {
+    color: #fd0072;
+}
+
+.page-heading {
+    font-size: 3rem;
+    color: #fd0072;
+}
+
+.jump-to-bottom {
+    margin-bottom: 50px;
+    font-size: 12px;
+}
+
+.edited-pages {
+    margin-bottom: 100px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.pages-link {
+    font-size: 1.5rem;
+}
