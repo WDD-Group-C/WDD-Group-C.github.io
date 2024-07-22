@@ -1,10 +1,10 @@
-// Function to validate email
+// Validate email function
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-// Function to set error message
+// Set error message function
 function setError(inputGroup, message) {
     const errorElement = inputGroup.querySelector(".error");
     errorElement.innerText = message;
@@ -12,7 +12,7 @@ function setError(inputGroup, message) {
     inputGroup.classList.remove("success");
 }
 
-// Function to set success
+// Set success function
 function setSuccess(inputGroup) {
     const errorElement = inputGroup.querySelector(".error");
     errorElement.innerText = "";
@@ -26,10 +26,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const goToMainMenuButton = document.getElementById("goToMainMenu");
 
     form.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault(); 
 
         if (validateInputs()) {
-            const recipientEmail = "skshan8983@gmail.com"; // Replace with your email address
+            const recipientEmail = "skshan8983@gmail.com";
             const subject = "Feedback Form Submission";
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
@@ -41,11 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const mailtoLink = `mailto:$skshan8983@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-            // Simulate sending email (for demonstration)
-            // window.location.href = mailtoLink;
+        
 
-            modal.style.display = "block"; // Show the modal
-            form.reset(); // Clear the form fields
+            modal.style.display = "block"; 
+            form.reset(); 
         } else {
             const unfilledField = document.querySelector(".input-group.error");
             if (unfilledField) {
@@ -55,11 +54,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     goToMainMenuButton.addEventListener("click", function() {
-        modal.style.display = "none"; // Hide the modal
-        window.location.href = "home.html"; // Redirect to the main menu
+        modal.style.display = "none"; 
+        window.location.href = "home.html"; 
     });
 
-    // Form validation function
+    // Form function validation 
     function validateInputs() {
         const inputName = document.getElementById("name");
         const inputEmail = document.getElementById("email");
