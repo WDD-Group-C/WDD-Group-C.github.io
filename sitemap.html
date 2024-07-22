@@ -1,110 +1,125 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang ="en">
     <head>
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0"><!--view the window in its original size-->
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Content</title><!--Title to be appeared in the top of the browser window-->
+        <title>Site Map</title><!--Title to be appeared in the top of the browser window-->
         <link rel = "stylesheet" href = "style.css">
-        <link rel = "stylesheet" href = "contentS4.css">
+        <link rel="stylesheet" href="otherstylesheets/sitemap.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <script src="content.js"></script>
     </head>
     <body>
-        <header  id = "topscreen">
-            <nav> <!--navigation bar-->
+        <header>
+            <nav>
                 <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
                 <div class="nav-link">
                     <ul>
-                        <li><a href="home.html">HOME</a></li><!--Each link directs the user to a certain page-->
+                        <li><a href="home.html">HOME</a></li>
                         <li><a href="shop.html">SHOP</a></li>
                         <li><a href="gallery.html">GALLERY</a></li>
                         <li><a href="feedback.html">FEEDBACK</a></li>
                         <li><a href="sitemap.html">SITE MAP</a></li>
-                        <li><a href="profile.html">ABOUT US</a></li>
+                        <li><a href="">ABOUT US</a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
-            <section> 
-                <h1>Marine Protected Areas (MPAs) and their role in biodiversity conservation </h1>
-                <hr><!--divides the page by a horizontal ruler-->
-                <div class = "elementleft">
-                    <img src = "images/river.png" alt="river"><!--the alt tag describes the image if it is invisible-->
-                    <p class = "description">
-                        Marine Protected Areas are the sections of the ocean that are limited from human activity by the government, 
-                        making it helpful to protect and conserve the ocean ecosystems around the globe
-                        as they act as a shield to marine species from events such as overfishing, pollution, and habitat destruction 
-                        (Laffoley, D., et al, 2019). The types of MPAs include marine reserves, marine sanctuaries, 
-                        wildlife refuges and national parks.
-                    </p>
+            <section>
+                <div id="structure">
+                    <svg width = "100%" height = "1000" aria-label = "Sitemap">
+                        <g class = "node" data-link = "home.html" tabindex = "0" aria-label="Home">
+                            <rect x = "850" y = "90" width = "200" height = "70" ></rect>
+                            <text x = "920" y = "130">Home</text>
+                        </g>
+                        <g class = "node" data-link = "content.html" tabindex = "0" aria-label="More">
+                            <rect x = "850" y = "290" width = "200" height = "70" ></rect>
+                            <text x = "905" y = "330">Read More</text>
+                        </g>
+                        <g class = "node" data-link = "shop.html" tabindex = "0" aria-label="Shop">
+                            <rect x = "550" y = "290" width = "200" height = "70" ></rect>
+                            <text x = "625" y = "330">Shop</text>
+                        </g>
+                        <g class = "node" data-link = "gallery.html" tabindex = "0" aria-label="Gallery">
+                            <rect x = "1150" y = "290" width = "200" height = "70" ></rect>
+                            <text x = "1215" y = "330">Gallery</text>
+                        </g>
+                        <g class = "node" data-link = "sitemap.html" tabindex = "0" aria-label="Site Map">
+                            <rect x = "250" y = "290" width = "200" height = "70" ></rect>
+                            <text x = "305" y = "330">Site Map</text>
+                        </g>
+                        <g class = "node" data-link = "profile.html" tabindex = "0" aria-label="About Us">
+                            <rect x = "1450" y = "290" width = "200" height = "70" ></rect>
+                            <text x = "1505" y = "330">About Us</text>
+                        </g>
+                        <g class = "node" data-link = "pageeditor1.html" tabindex = "0" aria-label="Page Editor 1">
+                            <rect x = "250" y = "390" width = "200" height = "70" ></rect>
+                            <text x = "290" y = "430">Page Editor 4</text>
+                        </g>
+                        <g class = "node" data-link = "pageEditor2.html" tabindex = "0" aria-label="Page Editor 2">
+                            <rect x = "550" y = "390" width = "200" height = "70" ></rect>
+                            <text x = "590" y = "430">Page Editor 1</text>
+                        </g>
+                        <g class = "node" data-link = "pageEditor3.html" tabindex = "0" aria-label="Page Editor 3">
+                            <rect x = "1150" y = "390" width = "200" height = "70" ></rect>
+                            <text x = "1190" y = "430">Page Editor 4</text>
+                        </g>
+                        <g class = "node" data-link = "pageEditorS4.html" tabindex = "0" aria-label="Page Editor 4">
+                            <rect x = "1450" y = "390" width = "200" height = "70" ></rect>
+                            <text x = "1490" y = "430">Page Editor 3</text>
+                        </g>
+                        <g class = "node" data-link = "content1.html" tabindex = "0" aria-label="content1">
+                            <rect x = "850" y = "390" width = "200" height = "70" ></rect>
+                            <text x = "905" y = "430">content1</text>
+                        </g>
+                        <g class = "node" data-link = "content2.html" tabindex = "0" aria-label="content2">
+                            <rect x = "850" y = "490" width = "200" height = "70" ></rect>
+                            <text x = "905" y = "530">content2</text>
+                        </g>
+                        <g class = "node" data-link = "content3.html" tabindex = "0" aria-label="content3">
+                            <rect x = "850" y = "590" width = "200" height = "70" ></rect>
+                            <text x = "905" y = "630">content3</text>
+                        </g>
+                        <g class = "node" data-link = "contentS4.html" tabindex = "0" aria-label="content4">
+                            <rect x = "850" y = "690" width = "200" height = "70" ></rect>
+                            <text x = "905" y = "730">content4</text>
+                        </g>
+
+                        <line class = "branch" x1 = "947" x2 = "947" y1 = "290" y2 = "160"></line>
+                        <line class = "branch" x1 = "650" x2 = "947" y1 = "220" y2 = "220"></line>
+                        <line class = "branch" x1 = "650" x2 = "650" y1 = "220" y2 = "290"></line>
+                        <line class = "branch" x1 = "350" x2 = "947" y1 = "220" y2 = "220"></line>
+                        <line class = "branch" x1 = "350" x2 = "947" y1 = "220" y2 = "220"></line>
+                        <line class = "branch" x1 = "350" x2 = "350" y1 = "220" y2 = "290"></line>
+                        <line class = "branch" x1 = "947" x2 = "1247" y1 = "220" y2 = "220"></line>
+                        <line class = "branch" x1 = "1247" x2 = "1247" y1 = "220" y2 = "290"></line>
+                        <line class = "branch" x1 = "947" x2 = "1547" y1 = "220" y2 = "220"></line>
+                        <line class = "branch" x1 = "1550" x2 = "1547" y1 = "220" y2 = "290"></line>
+                        <line class = "branch" x1 = "350" x2 = "350" y1 = "360" y2 = "390"></line>
+                        <line class = "branch" x1 = "650" x2 = "650" y1 = "360" y2 = "390"></line>
+                        <line class = "branch" x1 = "950" x2 = "950" y1 = "360" y2 = "390"></line>
+                        <line class = "branch" x1 = "1250" x2 = "1250" y1 = "360" y2 = "390"></line>
+                        <line class = "branch" x1 = "1550" x2 = "1550" y1 = "360" y2 = "390"></line>
+                        <line class = "branch" x1 = "950" x2 = "950" y1 = "460" y2 = "490"></line>
+                        <line class = "branch" x1 = "950" x2 = "950" y1 = "560" y2 = "590"></line>
+                        <line class = "branch" x1 = "950" x2 = "950" y1 = "660" y2 = "690"></line>
+                    </svg>
                 </div>
-                <br>
-                <div class="elementright">
-                    <div class="description">
-                        <p>
-                            Different types of MPAs range from zones that prohibit all extractive activities to zones allowing some human activities.
-                            some types are namely, marine parks, marine sanctuaries, etc.
-                            No-take zones (prohibit all activities) are exceptionally effective in protecting marine habits and biodiversity as it gives marine life to recover
-                            and flourish without being interfered by human actitvities (Coral Reef Alliance, 1994).</p>
-                    </div>
-                    <img src="images/typesofmpa.png" alt = "Types of MPAs">
-                </div>
-                <br>
-                <div class="elementleft">
-                    <img src="images/bartolome.png" alt = "Bartalome">
-                    <div class="description">
-                        <p>
-                            MPAs are established in various aquatic habitats. opean oceans, 
-                            coastlines and rivers are some examples of possible loctions of Marine Protected Areas
-                        </p>
-                    </div>
-                </div>
-                <br>
-                <div class="elementright">
-                    <div class="description">
-                        <p>Phoenix Islands Protected Area is the largest Marine Protecting Area in the world, located in Kiribati.
-                           it covers 410,500 square kilometers (158,453 square miles), apprimately the size of the U.S. state of California (National Geographic, 1888).
-                        </p>
-                    </div>
-                    <img src="images/biggestMPA.png" alt="biggest MPA">
-                </div>
-                <br>
-                <div class="elementleft">
-                    <div class="description">
-                        <p>
-                            Looking forward, the establishment of new no-take zones,
-                            such as the one planned in Roatan, Honduras, highlights 
-                            the ongoing commitment to preserving critical reef ecosystems through collaborative conservation efforts. 
-                            By partnering with local communities, dive shops, and government bodies, 
-                            these initiatives minimizes overfishing and poaching. 
-                            This collective action aims to ensure the thriving of marine life for future generations, 
-                            fostering a sense of shared responsibility and stewardship for our oceans (National Geographic, 1888).
-                        </p>
-                    </div>
-                    <img src="images/pacificRemote.png" alt="biggest MPA">
-                </div>
-                <a href="#topscreen" id="fix">&uarr; back to top</a>
             </section>
-            <br>
         </main>
         <footer>
             <h4>About Us</h4>
-            <p style="color: white;">Welcome to Life Below Water, a passionate community dedicated to preserving our marine ecosystems. Our journey began with a simple idea to protect and conserve the beauty and biodiversity of our oceans.Join us as we work together to ensure a sustainable and thriving ocean for future generations.</p>
-            <div class="social">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-linkedin"></i>
-                <a href="pageEditorS4.html"><i class="fa-regular fa-pen-to-square"></i></a>
-            </div>
-            <p style="color: white;">copyright ©2024. Designed by Sarah Aleesha Samuel</p>
+                <p style="color: white;">Welcome to Life Below Water, a passionate community dedicated to preserving our marine ecosystems. Our journey began with a simple idea to protect and conserve the beauty and biodiversity of our oceans.Join us as we work together to ensure a sustainable and thriving ocean for future generations.</p>
+                <div class="social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <a href="pageedit-stud4.html"><i class="fa-regular fa-pen-to-square"></i></a>
+                </div>
+                <p style="color: white;">copyright ©2024. Designed by Sarah Aleesha Samuel</p>
         </footer>
+        <script src="sitemap.js"></script>
     </body>
 </html>
