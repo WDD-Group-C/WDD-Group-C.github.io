@@ -1,3 +1,55 @@
 h1{
-    color:aquamarine;
+    color: black;
+    text-align: center;
+    margin: 50px;
+    font-size: 1.6em;
 }
+header{
+    background-image: linear-gradient(to top, rgb(49, 150, 184), white);
+}
+body{
+    background-color: rgb(49, 150, 184);
+}
+
+.elementright, .elementleft{
+    width:90%;
+    height:auto;
+    background-color: aqua;
+    border: 2px solid burlywood;
+    border-radius:5px;
+    overflow: hidden;
+    display:flex;
+}
+.elementright{
+    margin-left: 10%;
+}
+
+img{
+    width: 40%;
+    height: auto;
+    position: relative;
+}
+
+.description{
+    width: 40%;
+    height: auto;
+    margin: auto;
+    font-size: 1.5em;
+}
+#fix{
+    position: fixed;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: aqua;
+    color:black;
+    font-size: 1.2em;
+    text-decoration: none;
+    right: 2px;
+    bottom:1px;
+    z-index: 2;
+}
+#fix:hover{
+    background-color:black;
+    color: aquamarine;
+}
+
