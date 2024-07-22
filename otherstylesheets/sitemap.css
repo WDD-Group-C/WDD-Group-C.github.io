@@ -1,0 +1,17 @@
+
+body {
+    background-image: linear-gradient(to bottom, rgb(186, 246, 248), rgb(84, 161, 214)) ;
+}
+.node{
+    stroke:rgb(35, 219, 158);
+    fill:aquamarine
+
+}
+.branch{
+    stroke:black;
+    stroke-width: 2px;
+}
+.node text{
+    fill: rgb(20, 20, 160);
+    stroke: blue;
+}
