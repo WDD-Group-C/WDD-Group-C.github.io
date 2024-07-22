@@ -1,48 +1,110 @@
-
 <!DOCTYPE html>
-<html lang="en"> <!--language of the document-->
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>sitemap</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    
-    	<script>
-        // Javascript goes here
-      </script>
-      <style>
-        body{
-          background-image: url('images/background.png');
-        }
-        h1{
-          font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-          color: rgb(80, 97, 230);
-        }
-        ul li{
-          list-style-type: disc;
-        }
-        
-      </style>
-      <!--bullet points for now-->>
-  </head>
-  <body>
-    <header>
-        <h1>Explore our site using the links below...</h1>
-    </header>
-    
-    <main>
-        <ul>
-          <li>Cover</li>
-          <li>Home</li>
-          <li>Gallery</li>
-          <li>Shop</li>
-        </ul>
-    </main>
-    
-    <footer>
-      <!-- Footer content goes here -->
-    </footer>
-  </body><!--body tag closes here-->
-</html><!--HTML tag closes here-->
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"><!--view the window in its original size-->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Content</title><!--Title to be appeared in the top of the browser window-->
+        <link rel = "stylesheet" href = "style.css">
+        <link rel = "stylesheet" href = "contentS4.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="content.js"></script>
+    </head>
+    <body>
+        <header  id = "topscreen">
+            <nav> <!--navigation bar-->
+                <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
+                <div class="nav-link">
+                    <ul>
+                        <li><a href="home.html">HOME</a></li><!--Each link directs the user to a certain page-->
+                        <li><a href="shop.html">SHOP</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="feedback.html">FEEDBACK</a></li>
+                        <li><a href="site.html">SITE MAP</a></li>
+                        <li><a href="profile.html">ABOUT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section> 
+                <h1>Marine Protected Areas (MPAs) and their role in biodiversity conservation </h1>
+                <hr><!--divides the page by a horizontal ruler-->
+                <div class = "elementleft">
+                    <img src = "images/river.png" alt="river"><!--the alt tag describes the image if it is invisible-->
+                    <p class = "description">
+                        Marine Protected Areas are the sections of the ocean that are limited from human activity by the government, 
+                        making it helpful to protect and conserve the ocean ecosystems around the globe
+                        as they act as a shield to marine species from events such as overfishing, pollution, and habitat destruction 
+                        (Laffoley, D., et al, 2019). The types of MPAs include marine reserves, marine sanctuaries, 
+                        wildlife refuges and national parks.
+                    </p>
+                </div>
+                <br>
+                <div class="elementright">
+                    <div class="description">
+                        <p>
+                            Different types of MPAs range from zones that prohibit all extractive activities to zones allowing some human activities.
+                            some types are namely, marine parks, marine sanctuaries, etc.
+                            No-take zones (prohibit all activities) are exceptionally effective in protecting marine habits and biodiversity as it gives marine life to recover
+                            and flourish without being interfered by human actitvities (Coral Reef Alliance, 1994).</p>
+                    </div>
+                    <img src="images/typesofmpa.png" alt = "Types of MPAs">
+                </div>
+                <br>
+                <div class="elementleft">
+                    <img src="images/bartolome.png" alt = "Bartalome">
+                    <div class="description">
+                        <p>
+                            MPAs are established in various aquatic habitats. opean oceans, 
+                            coastlines and rivers are some examples of possible loctions of Marine Protected Areas
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="elementright">
+                    <div class="description">
+                        <p>Phoenix Islands Protected Area is the largest Marine Protecting Area in the world, located in Kiribati.
+                           it covers 410,500 square kilometers (158,453 square miles), apprimately the size of the U.S. state of California (National Geographic, 1888).
+                        </p>
+                    </div>
+                    <img src="images/biggestMPA.png" alt="biggest MPA">
+                </div>
+                <br>
+                <div class="elementleft">
+                    <div class="description">
+                        <p>
+                            Looking forward, the establishment of new no-take zones,
+                            such as the one planned in Roatan, Honduras, highlights 
+                            the ongoing commitment to preserving critical reef ecosystems through collaborative conservation efforts. 
+                            By partnering with local communities, dive shops, and government bodies, 
+                            these initiatives minimizes overfishing and poaching. 
+                            This collective action aims to ensure the thriving of marine life for future generations, 
+                            fostering a sense of shared responsibility and stewardship for our oceans (National Geographic, 1888).
+                        </p>
+                    </div>
+                    <img src="images/pacificRemote.png" alt="biggest MPA">
+                </div>
+                <a href="#topscreen" id="fix">&uarr; back to top</a>
+            </section>
+            <br>
+        </main>
+        <footer>
+            <h4>About Us</h4>
+            <p style="color: white;">Welcome to Life Below Water, a passionate community dedicated to preserving our marine ecosystems. Our journey began with a simple idea to protect and conserve the beauty and biodiversity of our oceans.Join us as we work together to ensure a sustainable and thriving ocean for future generations.</p>
+            <div class="social">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="pageEditorS4.html"><i class="fa-regular fa-pen-to-square"></i></a>
+            </div>
+            <p style="color: white;">copyright ©2024. Designed by Sarah Aleesha Samuel</p>
+        </footer>
+    </body>
+</html>
