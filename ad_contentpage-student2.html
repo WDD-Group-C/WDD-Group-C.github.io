@@ -1,86 +1,186 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>Additional Content page</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </head>
-    <body>
-        <section class="cnt_header_img"></section>
-        <section class="header">
-        <nav>
-            <a href="home.html"><img src="images/logo.png" alt="Logo"></a>
-            <div class="nav-link">
-                <ul>
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="">SHOP</a></li>
-                    <li><a href="">GALLARY</a></li>
-                    <li><a href="feedback.html">FEEDBACK</a></li>
-                    <li><a href="">SITE MAP</a></li>
-                    <li><a href="">ABOUT US</a></li>
-                </ul>
-            </div>
-        </nav>
-    </section>
-    <div class="text2">
-        <h1>The Importance of Marine Conservation</h1>
-        <p>Marine conservation is crucial for maintaining ocean health, biodiversity, and sustainable livelihoods. By protecting marine ecosystems, we ensure the survival of countless species, support human communities, and preserve the natural beauty of our oceans for future generations.</p>
-    </div>
-    <br>
-    <br>
-    <section class="content-section">
-        <div class="content-wrapper">
-            <div class="content-text">
-                <h2>Preserving Marine Biodiversity</h2>
-                <img src="images/p1.webp" alt="Descriptive Alt Text" class="content-image">
-                <p>Marine conservation is essential for maintaining the diversity of life in our oceans. Healthy marine ecosystems support a wide range of species, which are crucial for the overall health of the planet. Protecting these ecosystems ensures that future generations can enjoy and benefit from their rich biodiversity.</p>
-            </div>
-        </div>
-    
-        <div class="content-wrapper">
-            <div class="content-text">
-                <h2>Ensuring Sustainable Fisheries</h2>
-                <img src="images/img5.avif" alt="Descriptive Alt Text" class="content-image">
-                <p>Sustainable fisheries are crucial for maintaining the balance of marine ecosystems and supporting global food security. By implementing and adhering to sustainable fishing practices, we can prevent overfishing, allowing fish populations to replenish and thrive. This, in turn, ensures that future generations can continue to rely on the ocean as a vital source of food and economic opportunity.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section class="content-section">
-        <div class="content-wrapper">
-            <div class="content-text">
-                <h2>Celebrating Conservation Successes</h2>
-                <img src="images/p1.webp" alt="Descriptive Alt Text" class="content-image">
-                <p>Marine conservation efforts have led to significant positive outcomes. Successful initiatives include protecting endangered species through habitat preservation, implementing sustainable fishing practices, and organizing beach clean-ups. These efforts not only help restore marine ecosystems but also inspire further action and commitment to ocean conservation.</p>
-            </div>
-        </div>
-    
-        <div class="content-wrapper">
-            <div class="content-text">
-                <h2>Combating Major Ocean Threats</h2>
-                <img src="images/img6.jpg" alt="Descriptive Alt Text" class="content-image">
-                <p>Our oceans face numerous threats, including overfishing, pollution, climate change, and habitat destruction. Overfishing depletes fish populations, pollution contaminates marine habitats, climate change causes ocean warming and acidification, and habitat destruction removes crucial breeding and feeding grounds. Understanding and addressing these issues is vital for the survival of marine life and the health of our oceans.</p>
-            </div>
-        </div>
-    </section>
-    <br>
-    <br>
-    <footer>
-        <h4>About Us</h4>
-        <p style="color: white;">Welcome to Life Below Water, a passionate community dedicated to preserving our marine ecosystems. Our journey began with a simple idea to protect and conserve the beauty and biodiversity of our oceans.Join us as we work together to ensure a sustainable and thriving ocean for future generations.</p>
-        <div class="social">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-linkedin"></i>
-            <a href=""><i class="fa-regular fa-pen-to-square"></i></a>
-        </div>
-        <p style="color: white;">copyright ©2024. Designed by Ocean Action Hub</p>
-    </footer>
-    </body>
-</html>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #0011ff07;
+}
+
+.cnt_header_img{
+    height:500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301),rgba(0, 0, 0, 0.7)), url('images/img3.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top: 110px;
+}
+.header{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left:0%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+}
+nav{
+    display: flex;
+    padding: 1.5% 3%;
+    padding-left: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 190px;
+}
+
+.nav-link{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-link ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.nav-link ul li a.active{
+  color: #4753ff; 
+  font-weight: 700;
+}
+
+.nav-link ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link ul li:hover::after{
+    width: 100%;
+
+}
+
+.text2 p {
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color: white;
+  }
+  
+
+h3{
+    text-align: center;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.text2 h1{
+    font-size: 62px;
+}
+
+.text2{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(26, 25, 25, 0.411);
+    background-color: #4053ff36;
+  }
+  
+  .content-image {
+    width: 70%;
+    height: 300px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 15px;
+  }
+  
+  
+  .content-text {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .content-text h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .content-text p {
+    font-size: 20px;
+    color: #666;
+  }
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+}
+
+footer p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+footer h4{
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-weight: 600;
+    color: white;
+}
+
+footer .fa-brands{
+    margin: 0 8px;
+    cursor: pointer;
+    padding: 18px 0;
+    color: white;
+}
+
+footer .fa-regular{
+  margin: 0 8px;
+  cursor: pointer;
+  padding: 18px 0;
+  color: white;
+}
