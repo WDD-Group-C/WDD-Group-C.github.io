@@ -64,6 +64,9 @@ nav img{
   
 }
 
+*{
+    font-family: 'Poppins', sans-serif;
+}
     
     
 
@@ -83,7 +86,7 @@ body {
     background-size: cover;
     height: 100vh;
     background-attachment: fixed;
-    margin-top: 70px;
+    margin-top: 130px;
 }
 
 .merch-grid-container {
